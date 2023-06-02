@@ -1,0 +1,207 @@
+:root {
+    --color-primary: #23272E;
+    --color-secondary: #8B909A;
+    --color-white: #FFFFFF;
+    --color-bg: #F3F4F8;
+    --color-bg-variant: #F1F2F6;
+    --color-danger: #EA5455;
+    --color-success: #28C76F;
+    --color-warning: #FFC600;
+    --color-info: #0F60FF;
+    --color-circle: #7367F0;
+
+    --card-border-radius: 16px;
+    --br-6: 6px;
+    --br-4: 4px;
+
+
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+html {
+    font-size: 13px;
+}
+
+body {
+    font-family: "Public Sans";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: var(--color-primary);
+    line-height: 1.3;
+    list-style: none;
+}
+
+.container {
+    padding-inline: 15px;
+    margin: 0 auto;
+    background: var(--color-bg);
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    gap: 26px;
+}
+
+a {
+    color: var(--color-primary);
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+h1 {
+    font-weight: 800;
+    font-size: 2.46rem;
+}
+
+h2 {
+    font-size: 1.85rem;
+}
+
+h3 {
+    font-size: 1.69rem;
+}
+
+h4 {
+    font-size: 1.38rem;
+}
+
+h5 {
+    font-size: 1rem;
+}
+
+.text-muted {
+    color: var(--color-secondary);
+    font-weight: 500;
+}
+
+.block-title {
+    text-transform: uppercase;
+}
+
+.danger {
+    color: var(--color-danger);
+}
+
+.info {
+    color: var(--color-info);
+}
+
+.success {
+    color: var(--color-success);
+}
+
+.warning {
+    color: var(--color-warning);
+}
+
+.circle {
+    color: var(--color-circle);
+}
+
+.text-highlight {
+    color: var(--color-primary);
+}
+
+.br-16 {
+    border-radius: var(--card-border-radius);
+}
+
+.br-6 {
+    border-radius: var(--br-6);
+}
+
+.br-4 {
+    border-radius: var(--br-4);
+}
+
+aside {
+    background: var(--color-white);
+    padding: 0 0 10px;
+}
+
+aside .top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1.54rem;
+    padding-inline: 14px;
+}
+
+aside .logo {
+    display: flex;
+    gap: 0.78rem;
+}
+
+.logo h1 {
+    font-size: 1.69rem;
+}
+
+/* ------------ SIDEBAR ------------ */
+
+aside .sidebar {
+    display: flex;
+    flex-direction: column;
+    /* height: 86vh; */
+    position: relative;
+    top: 2.31rem;
+
+}
+
+aside .sidebar a {
+    display: flex;
+    color: var(--color-secondary);
+    padding: 0 16px 9px;
+    margin: 14px;
+    align-items: center;
+    position: relative;
+    transition: all 300ms ease;
+    -moz-transition: all 300ms ease;
+    -o-transition: all 300ms ease;
+}
+
+aside .sidebar a img,
+aside .sidebar a span {
+    margin-right: 8px;
+    transition: all 300ms ease;
+    -moz-transition: all 300ms ease;
+    -o-transition: all 300ms ease;
+}
+
+.sidebar .block-title {
+    padding-left: 30px;
+}
+
+.sidebar img {
+    height: 1.69rem;
+    width: 1.69rem;
+}
+
+aside .sidebar a.active {
+    background: var(--color-bg);
+    padding-top: 9px;
+}
+
+aside .sidebar a:hover {
+    color: var(--color-primary);
+}
+
+aside .sidebar a:hover span,
+aside .sidebar a:hover img {
+    margin-left: 1rem;
+}
+
+aside .sidebar .menu-item {
+    font-size: 15px;
+}
+
+aside .sidebar .menu {
+    font-size: 11px;
+}
+
