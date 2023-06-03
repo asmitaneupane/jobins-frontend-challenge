@@ -27,12 +27,11 @@ function changeTab(evt, tabId) {
 }
 
 //search table
-
 function searchOrder() {
     var input, filter, table, tr, td, i, txtValue;
     input = document.getElementById("inputSearch");
     filter = input.value.toUpperCase();
-    table = document.getElementById("orderLists");
+    table = document.getElementById("orders");
     tr = table.getElementsByTagName("tr");
     for (i = 0; i < tr.length; i++) {
       td = tr[i].getElementsByTagName("td")[0];
@@ -45,4 +44,4 @@ function searchOrder() {
         }
       }       
     }
-  }
+}

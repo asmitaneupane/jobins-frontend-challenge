@@ -1,411 +1,433 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dashboard</title>
 
     <!-- Material CDN -->
-    <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet" />
 
     <!-- Public Sans Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap"
-      rel="stylesheet"
-    />
+        href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet" />
 
     <!-- Stylesheet -->
     <link rel="stylesheet" href="./assets/css/style.css" />
 
     <!-- Scripts -->
     <script type="text/javascript" src="/assets/js/tabSelection.js"></script>
+    <script type="text/javascript" src="/assets/js/orderStatusDropdown.js"></script>
+    <script type="text/javascript" src="/assets/js/dateRangeFilter.js"></script>
 
-  </head>
-  <body>
+</head>
+
+<body>
     <div class="page-content">
 
-    <!-- -----------------------ASIDE STARTS HERE------------------------ -->
-      <aside>
-        <div class="top">
-          <div class="logo">
-            <img src="./assets/images/logo.png" alt="" />
-            <h1>
-              Jo<span>Bins</span>
-            </h2>
-          </div>
-          <div class="close" id="indent-decrease">
-            <img src="./assets/images/indent-decrease.png" alt="" />
-          </div>
-        </div>
-        <!-- ----------------------------SIDEBAR STARTS HERE ---------------------------- -->
-        <div class="sidebar">
-          <div class="main-menu-wrapper">
-            <span class="menu block-title text-muted">Main Menu</span>
-            <a href="#" class="active br-6">
-              <img src="./assets/images/smart-home.png" alt="" />
-              <h3 class="menu-item text-highlight">Dashboard</h3>
-            </a>
-            <a href="#">
-              <span class="material-icons-outlined">shopping_cart</span>
-              <h3 class="menu-item ">Order Management</h3>
-            </a>
-            <a href="#">
-              <span class="material-icons-outlined">grade</span>
-              <h3 class="menu-item ">Brand</h3>
-            </a>
-          </div>
-          <div class="products-wrapper">
-            <span class="menu block-title text-muted">Products</span>
-            <a href="#">
-              <span class="material-icons-outlined">add_circle_outline</span>
-              <h3 class="menu-item ">Add Products</h3>
-            </a>
-            <a href="#">
-              <img src="./assets/images/box.png" alt="" />
-              <h3 class="menu-item">Product List</h3>
-            </a>
-          </div>
-        </div>
-      </aside>
-    <!-- -----------------------ASIDE ENDS HERE------------------------ -->
-
-    <main>
-        <div class="container">
-            <!-- -----------------------NAVBAR STARTS HERE------------------------ -->
-            <div class="navbar">
-                <h1 class="page-title">Dashboard</h1>
-                <div class="actions">
-                    <div class="notifications">
-                        <i class="material-icons-outlined">
-                            notifications
-                        </i>
-                        <span>4</span>
-                    </div>
-                    <div class="profile">
-                        <span class="user-logo"></span>
-                        <span class="user-online"></span>
-                    </div>
+        <!-- -----------------------ASIDE STARTS HERE------------------------ -->
+        <aside>
+            <div class="top">
+                <div class="logo">
+                    <img src="./assets/images/logo.png" alt="" />
+                    <h1>
+                        Jo<span>Bins</span>
+                        </h2>
+                </div>
+                <div class="close" id="indent-decrease">
+                    <img src="./assets/images/indent-decrease.png" alt="" />
                 </div>
             </div>
-            <!-- -----------------------INSIGHTS STARTS HERE------------------------ -->
-            <div class="insights">
-                <div class="chart">
-                    <!-- -----------------------SALES STARTS HERE------------------------ -->
-                    <div class="card sales">
-                        <div class="left">
-                            <figure>
-                                <img src="./assets/images/business-and-finance 1.png" alt="">
-                            </figure>
+            <!-- ----------------------------SIDEBAR STARTS HERE ---------------------------- -->
+            <div class="sidebar">
+                <div class="main-menu-wrapper">
+                    <span class="menu block-title text-muted">Main Menu</span>
+                    <a href="#" class="active br-6">
+                        <img src="./assets/images/smart-home.png" alt="" />
+                        <h3 class="menu-item text-highlight">Dashboard</h3>
+                    </a>
+                    <a href="#">
+                        <span class="material-icons-outlined">shopping_cart</span>
+                        <h3 class="menu-item ">Order Management</h3>
+                    </a>
+                    <a href="#">
+                        <span class="material-icons-outlined">grade</span>
+                        <h3 class="menu-item ">Brand</h3>
+                    </a>
+                </div>
+                <div class="products-wrapper">
+                    <span class="menu block-title text-muted">Products</span>
+                    <a href="#">
+                        <span class="material-icons-outlined">add_circle_outline</span>
+                        <h3 class="menu-item ">Add Products</h3>
+                    </a>
+                    <a href="#">
+                        <img src="./assets/images/box.png" alt="" />
+                        <h3 class="menu-item">Product List</h3>
+                    </a>
+                </div>
+            </div>
+        </aside>
+        <!-- -----------------------ASIDE ENDS HERE------------------------ -->
+
+        <main>
+            <div class="container">
+                <!-- -----------------------NAVBAR STARTS HERE------------------------ -->
+                <div class="navbar">
+                    <h1 class="page-title">Dashboard</h1>
+                    <div class="actions">
+                        <div class="notifications">
+                            <i class="material-icons-outlined">
+                                notifications
+                            </i>
+                            <span>4</span>
                         </div>
-                        <span class="bar"></span>
-                        <div class="right">
-                            <div class="right-top title">
-                                <h3>Total Sales & Costs</h3>
-                                <p class="text-muted">Last 7 days</p>
+                        <div class="profile">
+                            <span class="user-logo"></span>
+                            <span class="user-online"></span>
+                        </div>
+                    </div>
+                </div>
+                <!-- -----------------------INSIGHTS STARTS HERE------------------------ -->
+                <div class="insights">
+                    <div class="chart">
+                        <!-- -----------------------SALES STARTS HERE------------------------ -->
+                        <div class="card sales">
+                            <div class="left">
+                                <figure>
+                                    <img src="./assets/images/business-and-finance 1.png" alt="">
+                                </figure>
                             </div>
-                            <div class="right-bottom">
-                                <h1>$350K</h1>
+                            <span class="bar"></span>
+                            <div class="right">
+                                <div class="right-top title">
+                                    <h3>Total Sales & Costs</h3>
+                                    <p class="text-muted">Last 7 days</p>
+                                </div>
+                                <div class="right-bottom">
+                                    <h1>$350K</h1>
+                                    <small class="text-muted">
+                                        <span class="success">
+                                            <i class="material-icons-outlined">
+                                                arrow_upward
+                                            </i>
+                                            8.56K
+                                        </span> vs last 7 days
+                                    </small>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- -----------------------PROFIT STARTS HERE------------------------ -->
+                        <div class="card profit">
+                            <div class="top">
+                                <div class="left">
+                                    <figure>
+                                        <img src="/assets/images/yen 1.png" alt="">
+                                    </figure>
+                                </div>
+                                <div class="right title">
+                                    <h3>Total Profit</h3>
+                                    <p class="text-muted">Last 7 Days</p>
+                                </div>
+                            </div>
+                            <div class="bottom">
+                                <h1>50K</h1>
                                 <small class="text-muted">
                                     <span class="success">
                                         <i class="material-icons-outlined">
                                             arrow_upward
                                         </i>
-                                        8.56K
+                                        12%
                                     </span> vs last 7 days
                                 </small>
                             </div>
                         </div>
-                    </div>
-                    <!-- -----------------------PROFIT STARTS HERE------------------------ -->
-                    <div class="card profit">
-                        <div class="top">
-                            <div class="left">
+                        <!-- -----------------------COUNTRY STATUS STARTS HERE------------------------ -->
+                        <div class="card country-status">
+                            <div class="country usa">
                                 <figure>
-                                    <img src="/assets/images/yen 1.png" alt="">
+                                    <img src="./assets/images/us 1.png" alt="">
                                 </figure>
+                                <div class="country-info">
+                                    <h5>30k</h5>
+                                    <p class="text-muted">United States</p>
+                                </div>
+                                <div class="progress-bar">
+                                    <span class="progress"></span>
+                                </div>
+                                <div class="status success">
+                                    <span class="material-icons-outlined">
+                                        expand_less
+                                    </span>
+                                    25.8%
+                                </div>
                             </div>
-                            <div class="right title">
-                                <h3>Total Profit</h3>
-                                <p class="text-muted">Last 7 Days</p>
+                            <div class="country brz">
+                                <figure>
+                                    <img src="./assets/images/br 1.png" alt="">
+                                </figure>
+                                <div class="country-info">
+                                    <h5>26k</h5>
+                                    <p class="text-muted">Brazil</p>
+                                </div>
+                                <div class="progress-bar">
+                                    <span class="progress"></span>
+                                </div>
+                                <div class="status success">
+                                    <span class="material-icons-outlined">
+                                        expand_more
+                                    </span>
+                                    16.2%
+                                </div>
                             </div>
-                        </div>
-                        <div class="bottom">
-                            <h1>50K</h1>
-                            <small class="text-muted">
-                                <span class="success">
-                                    <i class="material-icons-outlined">
-                                    arrow_upward
-                                    </i>
-                                12%
-                                </span> vs last 7 days
-                            </small>
-                        </div>
-                    </div>
-                    <!-- -----------------------COUNTRY STATUS STARTS HERE------------------------ -->
-                    <div class="card country-status">
-                        <div class="country usa">
-                            <figure>
-                                <img src="./assets/images/us 1.png" alt="">
-                            </figure>
-                            <div class="country-info">
-                                <h5>30k</h5>
-                                <p class="text-muted">United States</p>
-                            </div>
-                            <div class="progress-bar">
-                                <span class="progress"></span>
-                            </div>
-                            <div class="status success">
-                                <span class="material-icons-outlined">
-                                    expand_less
-                                </span>
-                            25.8%
-                            </div>
-                        </div>
-                        <div class="country brz">
-                            <figure>
-                                <img src="./assets/images/br 1.png" alt="">
-                            </figure>
-                            <div class="country-info">
-                                <h5>26k</h5>
-                                <p class="text-muted">Brazil</p>
-                            </div>
-                            <div class="progress-bar">
-                                <span class="progress"></span>
-                            </div>
-                            <div class="status success">
-                                <span class="material-icons-outlined">
-                                    expand_more
-                                </span>
-                            16.2%
-                            </div>
-                        </div>
-                        <div class="country aus">
-                            <figure>
-                                <img src="./assets/images/au 1.png" alt="">
-                            </figure>
-                            <div class="country-info">
-                                <h5>17k</h5>
-                                <p class="text-muted">Australia</p>
-                            </div>
-                            <div class="progress-bar">
-                                <span class="progress"></span>
-                            </div>
-                            <div class="status success">
-                                <span class="material-icons-outlined">
-                                    expand_more
-                                </span>
-                            11.9%
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <!-- -----------------------USER INFO STARTS HERE------------------------ -->
-                    <div class="user-info">
-                        <div class="left">
-                            <div class="user-icon">
-                                <span class="circle"></span>
-                                <div class="user-data">
-                                    <h5>Robert Fox</h5>
-                                    <p class="text-muted">robert@gmail.com</p>
+                            <div class="country aus">
+                                <figure>
+                                    <img src="./assets/images/au 1.png" alt="">
+                                </figure>
+                                <div class="country-info">
+                                    <h5>17k</h5>
+                                    <p class="text-muted">Australia</p>
+                                </div>
+                                <div class="progress-bar">
+                                    <span class="progress"></span>
+                                </div>
+                                <div class="status success">
+                                    <span class="material-icons-outlined">
+                                        expand_more
+                                    </span>
+                                    11.9%
                                 </div>
                             </div>
                         </div>
-                        <span class="bar"></span>
-                        <div class="middle">
-                            <span class="block-title text-muted">personal information</span>
-                            <ul>
-                                <li>
-                                    <span>Contact Number</span>
-                                    <span>(201)555-0124</span>
-                                </li>
-                                <li>
-                                    <span>Date of Birth</span>
-                                    <span>1 Jan, 1985</span>
-                                </li>
-                                <li>
-                                    <span>Member Since</span>
-                                    <span>3 March, 2023</span>
-                                </li>
-                            </ul>
-                        </div>
-                        <span class="bar"></span>
-                        <div class="right">
-                            <span class="block-title text-muted">shipping address</span>
-                            <p>3517 W. Gray St. Utica, Pennsylvania 57867</p>
-                            <div class="order-count">
-                                <span class="total-order">
-                                    <h1>150</h1>
-                                    <small class="text-muted">Total Order</small>
-                                </span>
-                                <span class="completed-order">
-                                    <h1>140</h1>
-                                    <small class="text-muted">Completed</small>
-                                </span>
-                                <span class="canceled-order">
-                                    <h1>10</h1>
-                                    <small class="text-muted">Canceled</small>
-                                </span>
+                    </div>
+                    <div class="card">
+                        <!-- -----------------------USER INFO STARTS HERE------------------------ -->
+                        <div class="user-info">
+                            <div class="left">
+                                <div class="user-icon">
+                                    <span class="circle"></span>
+                                    <div class="user-data">
+                                        <h5>Robert Fox</h5>
+                                        <p class="text-muted">robert@gmail.com</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <span class="bar"></span>
+                            <div class="middle">
+                                <span class="block-title text-muted">personal information</span>
+                                <ul>
+                                    <li>
+                                        <span>Contact Number</span>
+                                        <span>(201)555-0124</span>
+                                    </li>
+                                    <li>
+                                        <span>Date of Birth</span>
+                                        <span>1 Jan, 1985</span>
+                                    </li>
+                                    <li>
+                                        <span>Member Since</span>
+                                        <span>3 March, 2023</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <span class="bar"></span>
+                            <div class="right">
+                                <span class="block-title text-muted">shipping address</span>
+                                <p>3517 W. Gray St. Utica, Pennsylvania 57867</p>
+                                <div class="order-count">
+                                    <span class="total-order">
+                                        <h1>150</h1>
+                                        <small class="text-muted">Total Order</small>
+                                    </span>
+                                    <span class="completed-order">
+                                        <h1>140</h1>
+                                        <small class="text-muted">Completed</small>
+                                    </span>
+                                    <span class="canceled-order">
+                                        <h1>10</h1>
+                                        <small class="text-muted">Canceled</small>
+                                    </span>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <!-- -----------------------TABS START HERE------------------------ -->
-                    <div class="tabs">
-                        <button class="tab active" onclick="changeTab(event, 'tab1')">Tab 1</button>
-                        <button class="tab" onclick="changeTab(event, 'tab2')">Tab 2</button>
-                        <button class="tab" onclick="changeTab(event, 'tab3')">Tab 3</button>
+                        <!-- -----------------------TABS START HERE------------------------ -->
+                        <div class="tabs">
+                            <button class="tab active" onclick="changeTab(event, 'tab1')">All Orders</button>
+                            <button class="tab" onclick="changeTab(event, 'tab2')">Completed</button>
+                            <button class="tab" onclick="changeTab(event, 'tab3')">Canceled</button>
+                        </div>
                     </div>
                 </div>
+                <!-- -----------------------ORDER DETAIL STARTS HERE------------------------ -->
+                <div class="order-details">
+                    <div class="search-filter-bar">
+                        <div class="status-filter">
+                            <div class="dropdown">
+                                <button onclick="checkStatus()" class="dropbtn">Status: All
+                                    <span class="material-icons-outlined">
+                                        expand_less
+                                    </span>
+                                </button>
+                                <div id="orderStatus" class="dropdown-content">
+                                    <a href="#">Completed</a>
+                                    <a href="#">Pending</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="search-bar">
+                            <input type="text" id="inputSearch" onkeyup="searchOrder()" placeholder="Search...">
+                            <i class="material-icons-outlined">
+                                search
+                            </i>
+                        </div>
+                        <div class="date-range-filter">
+                            <div class="dropdown">
+                                <button onclick="filterByDate()" class="dateFilter">Filter by date range
+                                    <span class="material-icons-outlined">
+                                        expand_less
+                                    </span>
+                                </button>
+                                <div class="select-range">
+                                    <input type="text" id="min-date" class="date-range-filter"
+                                        placeholder="From: yyyy-mm-dd">
+
+                                    <input type="text" id="max-date" class="date-range-filter"
+                                        placeholder="To: yyyy-mm-dd">
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="order-lists">
+                        <div id="tab1" class="tab-content">
+                            <table id="orders">
+                                <thead>
+                                    <tr>
+                                        <th class="block-title">ID</th>
+                                        <th class="block-title">customer</th>
+                                        <th class="block-title">date</th>
+                                        <th class="block-title">total</th>
+                                        <th class="block-title">method</th>
+                                        <th class="block-title">status</th>
+                                        <th class="block-title">action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>#5089</td>
+                                        <td>Joseph Wheeler</td>
+                                        <td>6 April, 2023</td>
+                                        <td>$2,564</td>
+                                        <td>CC</td>
+                                        <td class="warning">Pending</td>
+                                        <td class="info">View Details</td>
+                                    </tr>
+                                    <tr>
+                                        <td>#5089</td>
+                                        <td>Joseph Wheeler</td>
+                                        <td>6 April, 2023</td>
+                                        <td>$2,564</td>
+                                        <td>CC</td>
+                                        <td class="warning">Pending</td>
+                                        <td class="info">View Details</td>
+                                    </tr>
+                                    <tr>
+                                        <td>#5089</td>
+                                        <td>Joseph Wheeler</td>
+                                        <td>6 April, 2023</td>
+                                        <td>$2,564</td>
+                                        <td>CC</td>
+                                        <td class="warning">Pending</td>
+                                        <td class="info">View Details</td>
+                                    </tr>
+                                    <tr>
+                                        <td>#5089</td>
+                                        <td>Joseph Wheeler</td>
+                                        <td>6 April, 2023</td>
+                                        <td>$2,564</td>
+                                        <td>CC</td>
+                                        <td class="warning">Pending</td>
+                                        <td class="info">View Details</td>
+                                    </tr>
+                                    <tr>
+                                        <td>#5089</td>
+                                        <td>Joseph Wheeler</td>
+                                        <td>6 April, 2023</td>
+                                        <td>$2,564</td>
+                                        <td>CC</td>
+                                        <td class="warning">Pending</td>
+                                        <td class="info">View Details</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div id="tab2" class="tab-content">Content 2</div>
+                        <div id="tab3" class="tab-content">Content 3</div>
+                        <div>Showing
+                            <select>
+                                <option value="1"></option>
+                                <option value="2"></option>
+                                <option value="3"></option>
+                                <option value="4"></option>
+                                <option value="5"></option>
+                                <option value="6"></option>
+                                <option value="7"></option>
+                                <option value="8"></option>
+                                <option value="9"></option>
+                                <option value="10"></option>
+                                <option value="11"></option>
+                                <option value="12"></option>
+                                <option value="13"></option>
+                                <option value="14"></option>
+                                <option value="15"></option>
+                                <option value="16"></option>
+                                <option value="17"></option>
+                                <option value="18"></option>
+                                <option value="19"></option>
+                                <option value="20"></option>
+                                <option value="21"></option>
+                                <option value="22"></option>
+                                <option value="23"></option>
+                                <option value="24"></option>
+                                <option value="25"></option>
+                                <option value="26"></option>
+                                <option value="27"></option>
+                                <option value="28"></option>
+                                <option value="29"></option>
+                                <option value="30"></option>
+                                <option value="31"></option>
+                                <option value="32"></option>
+                                <option value="33"></option>
+                                <option value="34"></option>
+                                <option value="35"></option>
+                                <option value="36"></option>
+                                <option value="37"></option>
+                                <option value="38"></option>
+                                <option value="39"></option>
+                                <option value="40"></option>
+                                <option value="41"></option>
+                                <option value="42"></option>
+                                <option value="43"></option>
+                                <option value="44"></option>
+                                <option value="45"></option>
+                                <option value="46"></option>
+                                <option value="47"></option>
+                                <option value="48"></option>
+                                <option value="49"></option>
+                            </select>
+                            of 50
+                        </div>
+                    </div>
+                </div>
+
             </div>
-            <!-- -----------------------ORDER DETAIL STARTS HERE------------------------ -->
-            <div class="order-details">
-                <div class="search-filter-bar">
-                    <div class="status-filter">
-
-
-                    </div>
-                    <div class="search-bar">
-                        <input type="text" id="inputSearch" 
-                        onkeyup="searchOrder()" 
-                        placeholder="Search...">
-                        <!-- <i class="material-icons-outlined">
-                            search
-                        </i> -->
-                    </div>
-                    <div class="data-range-filter">
-
-                    </div>
-                </div>
-                <div class="order-lists">
-                    <div id="tab1" class="tab-content">
-                        <table id="orderLists">
-                            <thead>
-                                <tr>
-                                    <th class="block-title">ID</th>
-                                    <th class="block-title">customer</th>
-                                    <th class="block-title">date</th>
-                                    <th class="block-title">total</th>
-                                    <th class="block-title">method</th>
-                                    <th class="block-title">status</th>
-                                    <th class="block-title">action</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>#5089</td>
-                                    <td>Joseph Wheeler</td>
-                                    <td>6 April, 2023</td>
-                                    <td>$2,564</td>
-                                    <td>CC</td>
-                                    <td class="warning">Pending</td>
-                                    <td class="info">View Details</td>
-                                </tr>
-                                <tr>
-                                    <td>#5089</td>
-                                    <td>Joseph Wheeler</td>
-                                    <td>6 April, 2023</td>
-                                    <td>$2,564</td>
-                                    <td>CC</td>
-                                    <td class="warning">Pending</td>
-                                    <td class="info">View Details</td>
-                                </tr>
-                                <tr>
-                                    <td>#5089</td>
-                                    <td>Joseph Wheeler</td>
-                                    <td>6 April, 2023</td>
-                                    <td>$2,564</td>
-                                    <td>CC</td>
-                                    <td class="warning">Pending</td>
-                                    <td class="info">View Details</td>
-                                </tr>
-                                <tr>
-                                    <td>#5089</td>
-                                    <td>Joseph Wheeler</td>
-                                    <td>6 April, 2023</td>
-                                    <td>$2,564</td>
-                                    <td>CC</td>
-                                    <td class="warning">Pending</td>
-                                    <td class="info">View Details</td>
-                                </tr>
-                                <tr>
-                                    <td>#5089</td>
-                                    <td>Joseph Wheeler</td>
-                                    <td>6 April, 2023</td>
-                                    <td>$2,564</td>
-                                    <td>CC</td>
-                                    <td class="warning">Pending</td>
-                                    <td class="info">View Details</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div id="tab2" class="tab-content">Content 2</div>
-                    <div id="tab3" class="tab-content">Content 3</div>
-                    <div>Showing
-                        <select>
-                            <option value="1"></option>
-                            <option value="2"></option>
-                            <option value="3"></option>
-                            <option value="4"></option>
-                            <option value="5"></option>
-                            <option value="6"></option>
-                            <option value="7"></option>
-                            <option value="8"></option>
-                            <option value="9"></option>
-                            <option value="10"></option>
-                            <option value="11"></option>
-                            <option value="12"></option>
-                            <option value="13"></option>
-                            <option value="14"></option>
-                            <option value="15"></option>
-                            <option value="16"></option>
-                            <option value="17"></option>
-                            <option value="18"></option>
-                            <option value="19"></option>
-                            <option value="20"></option>
-                            <option value="21"></option>
-                            <option value="22"></option>
-                            <option value="23"></option>
-                            <option value="24"></option>
-                            <option value="25"></option>
-                            <option value="26"></option>
-                            <option value="27"></option>
-                            <option value="28"></option>
-                            <option value="29"></option>
-                            <option value="30"></option>
-                            <option value="31"></option>
-                            <option value="32"></option>
-                            <option value="33"></option>
-                            <option value="34"></option>
-                            <option value="35"></option>
-                            <option value="36"></option>
-                            <option value="37"></option>
-                            <option value="38"></option>
-                            <option value="39"></option>
-                            <option value="40"></option>
-                            <option value="41"></option>
-                            <option value="42"></option>
-                            <option value="43"></option>
-                            <option value="44"></option>
-                            <option value="45"></option>
-                            <option value="46"></option>
-                            <option value="47"></option>
-                            <option value="48"></option>
-                            <option value="49"></option>
-                        </select>
-                        of 50
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </main>
+        </main>
     </div>
-  </body>
+</body>
+
 </html>
