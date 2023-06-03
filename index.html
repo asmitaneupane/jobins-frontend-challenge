@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
   <body>
-    <div class="container">
+    <div class="page-content">
 
     <!-- -----------------------ASIDE STARTS HERE------------------------ -->
       <aside>
@@ -70,6 +70,192 @@
         </div>
       </aside>
     <!-- -----------------------ASIDE ENDS HERE------------------------ -->
+
+    <main>
+        <div class="container">
+            <div class="navbar">
+                <h1 class="page-title">Dashboard</h1>
+                <div class="actions">
+                    <div class="notifications">
+                        <i class="material-icons-outlined">
+                            notifications
+                        </i>
+                        <span>4</span>
+                    </div>
+                    <div class="profile">
+                        <span class="user-logo"></span>
+                        <span class="user-online"></span>
+                    </div>
+                </div>
+            </div>
+            <!-- -----------------------NAVBAR ENDS HERE------------------------ -->
+            <div class="insights">
+                <div class="chart">
+                    <!-- -----------------------SALES STARTS HERE------------------------ -->
+                    <div class="card sales">
+                        <div class="left">
+                            <figure>
+                                <img src="./assets/images/business-and-finance 1.png" alt="">
+                            </figure>
+                        </div>
+                        <span class="bar"></span>
+                        <div class="right">
+                            <div class="right-top title">
+                                <h3>Total Sales & Costs</h3>
+                                <p class="text-muted">Last 7 days</p>
+                            </div>
+                            <div class="right-bottom">
+                                <h1>$350K</h1>
+                                <small class="text-muted">
+                                    <span class="success">
+                                        <i class="material-icons-outlined">
+                                            arrow_upward
+                                        </i>
+                                        8.56K
+                                    </span> vs last 7 days
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- -----------------------PROFIT STARTS HERE------------------------ -->
+                    <div class="card profit">
+                        <div class="top">
+                            <div class="left">
+                                <figure>
+                                    <img src="/assets/images/yen 1.png" alt="">
+                                </figure>
+                            </div>
+                            <div class="right title">
+                                <h3>Total Profit</h3>
+                                <p class="text-muted">Last 7 Days</p>
+                            </div>
+                        </div>
+                        <div class="bottom">
+                            <h1>50K</h1>
+                            <small class="text-muted">
+                                <span class="success">
+                                    <i class="material-icons-outlined">
+                                    arrow_upward
+                                    </i>
+                                12%
+                                </span> vs last 7 days
+                            </small>
+                        </div>
+                    </div>
+                    <!-- -----------------------COUNTRY STATUS STARTS HERE------------------------ -->
+                    <div class="card country-status">
+                        <div class="country usa">
+                            <figure>
+                                <img src="./assets/images/us 1.png" alt="">
+                            </figure>
+                            <div class="country-info">
+                                <h5>30k</h5>
+                                <p class="text-muted">United States</p>
+                            </div>
+                            <div class="progress-bar">
+                                <span class="progress"></span>
+                            </div>
+                            <div class="status success">
+                                <span class="material-icons-outlined">
+                                    expand_less
+                                </span>
+                            25.8%
+                            </div>
+                        </div>
+                        <div class="country brz">
+                            <figure>
+                                <img src="./assets/images/br 1.png" alt="">
+                            </figure>
+                            <div class="country-info">
+                                <h5>26k</h5>
+                                <p class="text-muted">Brazil</p>
+                            </div>
+                            <div class="progress-bar">
+                                <span class="progress"></span>
+                            </div>
+                            <div class="status success">
+                                <span class="material-icons-outlined">
+                                    expand_more
+                                </span>
+                            16.2%
+                            </div>
+                        </div>
+                        <div class="country aus">
+                            <figure>
+                                <img src="./assets/images/au 1.png" alt="">
+                            </figure>
+                            <div class="country-info">
+                                <h5>17k</h5>
+                                <p class="text-muted">Australia</p>
+                            </div>
+                            <div class="progress-bar">
+                                <span class="progress"></span>
+                            </div>
+                            <div class="status success">
+                                <span class="material-icons-outlined">
+                                    expand_more
+                                </span>
+                            11.9%
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- -----------------------USER INFO STARTS HERE------------------------ -->
+                <div class="card user-info">
+                    <div class="left">
+                        <div class="user-icon">
+                            <span class="circle"></span>
+                            <div class="user-data">
+                                <h5>Robert Fox</h5>
+                                <p class="text-muted">robert@gmail.com</p>
+                            </div>
+                        </div>
+                    </div>
+                    <span class="bar"></span>
+                    <div class="middle">
+                        <span class="block-title text-muted">personal information</span>
+                        <ul>
+                            <li>
+                                <span>Contact Number</span>
+                                <span>(201)555-0124</span>
+                            </li>
+                            <li>
+                                <span>Date of Birth</span>
+                                <span>1 Jan, 1985</span>
+                            </li>
+                            <li>
+                                <span>Member Since</span>
+                                <span>3 March, 2023</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <span class="bar"></span>
+                    <div class="right">
+                        <span class="block-title text-muted">shipping address</span>
+                        <p>3517 W. Gray St. Utica, Pennsylvania 57867</p>
+                        <div class="order-count">
+                            <span class="total-order">
+                                <h1>150</h1>
+                                <small class="text-muted">Total Order</small>
+                            </span>
+                            <span class="completed-order">
+                                <h1>140</h1>
+                                <small class="text-muted">Completed</small>
+                            </span>
+                            <span class="canceled-order">
+                                <h1>10</h1>
+                                <small class="text-muted">Canceled</small>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <!-- -----------------------USER INFO ENDS HERE------------------------ -->
+            </div>
+        <!-- -----------------------INSIGHTS ENDS HERE------------------------ -->
+
+
+        </div>
+    </main>
     </div>
   </body>
 </html>
