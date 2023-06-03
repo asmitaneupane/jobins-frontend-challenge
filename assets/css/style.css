@@ -1,486 +1,534 @@
 :root {
-  --color-primary: #23272e;
-  --color-secondary: #8b909a;
-  --color-white: #ffffff;
-  --color-bg: #f3f4f8;
-  --color-bg-variant: #f1f2f6;
-  --color-bg-progress-bar: #e9e7fd;
-  --color-bg-circle: linear-gradient(
-      0deg,
-      rgba(255, 255, 255, 0.2),
-      rgba(255, 255, 255, 0.2)
-    ),
-    #7367f0;
-  --color-danger: #ea5455;
-  --color-success: #28c76f;
-  --color-warning: #ffc600;
-  --color-info: #0f60ff;
-  --color-circle: #7367f0;
-  --color-vertical-bar: #dbdade;
-  --color-bright: rgba(132, 139, 200, 0.18);
+    --color-primary: #23272e;
+    --color-secondary: #8b909a;
+    --color-white: #ffffff;
+    --color-bg: #f3f4f8;
+    --color-bg-variant: #f1f2f6;
+    --color-bg-progress-bar: #e9e7fd;
+    --color-bg-circle: linear-gradient(0deg,
+            rgba(255, 255, 255, 0.2),
+            rgba(255, 255, 255, 0.2)),
+        #7367f0;
+    --color-danger: #ea5455;
+    --color-success: #28c76f;
+    --color-warning: #ffc600;
+    --color-info: #0f60ff;
+    --color-circle: #7367f0;
+    --color-vertical-bar: #dbdade;
+    --color-bright: rgba(132, 139, 200, 0.18);
 
-  --card-border-radius: 16px;
-  --br-6: 6px;
-  --br-4: 4px;
+    --card-border-radius: 16px;
+    --br-6: 6px;
+    --br-4: 4px;
 
-  --box-shadow: 0 2rem 3rem var(--color-bright);
+    --box-shadow: 0 2rem 3rem var(--color-bright);
 }
 
 * {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  text-decoration: none;
-  list-style: none;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
 }
 
 html {
-  font-size: 13px;
+    font-size: 13px;
 }
 
 body {
-  font-family: "Public Sans";
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  color: var(--color-primary);
-  line-height: 1.3;
+    font-family: "Public Sans";
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: var(--color-primary);
+    line-height: 1.3;
 }
 
 .page-content {
-  margin: 0 auto;
-  background: var(--color-bg);
-  display: grid;
-  grid-template-columns: 260px 1fr;
+    margin: 0 auto;
+    background: var(--color-bg);
+    display: grid;
+    grid-template-columns: 260px 1fr;
 }
 
 .container {
-  margin-inline: 26px;
+    margin-inline: 26px;
 }
 
 a {
-  color: var(--color-primary);
+    color: var(--color-primary);
 }
 
 img {
-  display: block;
-  width: 100%;
+    display: block;
+    width: 100%;
 }
 
 h1 {
-  font-weight: 700;
-  font-size: 2.46rem;
+    font-weight: 700;
+    font-size: 2.46rem;
 }
 
 h2 {
-  font-size: 1.85rem;
+    font-size: 1.85rem;
 }
 
 h3 {
-  font-size: 1.69rem;
+    font-size: 1.69rem;
 }
 
 h4 {
-  font-size: 1.38rem;
+    font-size: 1.38rem;
 }
 
 h5 {
-  font-size: 1rem;
+    font-size: 1rem;
 }
 
 small {
-  font-size: 14px;
+    font-size: 14px;
 }
 
 p {
-  font-size: 13px;
-  font-weight: 400;
+    font-size: 13px;
+    font-weight: 400;
 }
 
 .text-muted {
-  color: var(--color-secondary);
-  font-weight: 500;
+    color: var(--color-secondary);
+    font-weight: 500;
 }
 
 .block-title {
-  text-transform: uppercase;
+    text-transform: uppercase;
 }
 
 .danger {
-  color: var(--color-danger);
+    color: var(--color-danger);
 }
 
 .info {
-  color: var(--color-info);
+    color: var(--color-info);
 }
 
 .success {
-  color: var(--color-success);
+    color: var(--color-success);
 }
 
 .warning {
-  color: var(--color-warning);
+    color: var(--color-warning);
 }
 
 .text-highlight {
-  color: var(--color-primary);
+    color: var(--color-primary);
 }
 
 /* ----------------------------------- ASIDE ----------------------------- */
 
 aside {
-  background: var(--color-white);
-  padding: 0 0 10px;
+    background: var(--color-white);
+    padding: 0 0 10px;
 }
 
 aside .top {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-top: 1.54rem;
-  padding-inline: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 1.54rem;
+    padding-inline: 14px;
 }
 
 aside .logo {
-  display: flex;
-  gap: 0.78rem;
+    display: flex;
+    gap: 0.78rem;
 }
 
 .logo h1 {
-  font-size: 1.69rem;
+    font-size: 1.69rem;
 }
 
 /* ------------ SIDEBAR ------------ */
 
 aside .sidebar {
-  display: flex;
-  flex-direction: column;
-  /* height: 86vh; */
-  position: relative;
-  top: 2.31rem;
+    display: flex;
+    flex-direction: column;
+    /* height: 86vh; */
+    position: relative;
+    top: 2.31rem;
 }
 
 aside .sidebar a {
-  display: flex;
-  color: var(--color-secondary);
-  padding: 0 16px 9px;
-  margin: 14px;
-  align-items: center;
-  position: relative;
-  transition: all 300ms ease;
-  -moz-transition: all 300ms ease;
-  -o-transition: all 300ms ease;
+    display: flex;
+    color: var(--color-secondary);
+    padding: 0 16px 9px;
+    margin: 14px;
+    align-items: center;
+    position: relative;
+    transition: all 300ms ease;
+    -moz-transition: all 300ms ease;
+    -o-transition: all 300ms ease;
 }
 
 aside .sidebar a img,
 aside .sidebar a span {
-  margin-right: 8px;
-  transition: all 300ms ease;
-  -moz-transition: all 300ms ease;
-  -o-transition: all 300ms ease;
+    margin-right: 8px;
+    transition: all 300ms ease;
+    -moz-transition: all 300ms ease;
+    -o-transition: all 300ms ease;
 }
 
 .sidebar .block-title {
-  padding-left: 30px;
+    padding-left: 30px;
 }
 
 .sidebar img {
-  height: 1.69rem;
-  width: 1.69rem;
+    height: 1.69rem;
+    width: 1.69rem;
 }
 
 aside .sidebar a.active {
-  background: var(--color-bg);
-  padding-top: 9px;
+    background: var(--color-bg);
+    padding-top: 9px;
 }
 
 aside .sidebar a:hover {
-  color: var(--color-primary);
+    color: var(--color-primary);
 }
 
 aside .sidebar a:hover span,
 aside .sidebar a:hover img {
-  margin-left: 1rem;
+    margin-left: 1rem;
 }
 
 aside .sidebar .menu-item {
-  font-size: 15px;
-  font-weight: 400;
+    font-size: 15px;
+    font-weight: 400;
 }
 
 aside .sidebar .menu {
-  font-size: 11px;
+    font-size: 11px;
 }
 
 /* -------------------------- NAVBAR ------------------------ */
 
 main .navbar {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  margin-bottom: 23px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    margin-bottom: 23px;
 }
 
 main .navbar .actions {
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
 }
 
 .navbar .actions .profile {
-  position: relative;
+    position: relative;
 }
 
 .navbar .profile .user-logo {
-  background: var(--color-circle);
-  border-radius: 50%;
-  height: 32px;
-  width: 32px;
-  display: inline-block;
+    background: var(--color-circle);
+    border-radius: 50%;
+    height: 32px;
+    width: 32px;
+    display: inline-block;
 }
 
 .navbar .profile .user-online {
-  position: absolute;
-  background: var(--color-success);
-  height: 8px;
-  width: 8px;
-  border-radius: 50%;
-  bottom: 6px;
-  right: 0;
-  border: 1px solid var(--color-white);
+    position: absolute;
+    background: var(--color-success);
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    bottom: 6px;
+    right: 0;
+    border: 1px solid var(--color-white);
 }
 
 .navbar .notifications {
-  position: relative;
-  margin-right: 24px;
+    position: relative;
+    margin-right: 24px;
 }
 
 .navbar .notifications i {
-  font-size: 28px;
+    font-size: 28px;
 }
 
 .navbar .notifications span:last-child {
-  background: var(--color-danger);
-  border-radius: 50%;
-  height: 18px;
-  width: 18px;
-  color: var(--color-white);
-  position: absolute;
-  top: -4px;
-  right: -5px;
-  font-size: 13px;
-  font-weight: 600;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    background: var(--color-danger);
+    border-radius: 50%;
+    height: 18px;
+    width: 18px;
+    color: var(--color-white);
+    position: absolute;
+    top: -4px;
+    right: -5px;
+    font-size: 13px;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* -------------------------- MAIN BODY ------------------------ */
 
 main {
-  margin-top: 1.54rem;
+    margin-top: 1.54rem;
 }
 
 main h1.page-title {
-  line-height: 1;
+    line-height: 1;
 }
 
 main .chart {
-  display: grid;
-  grid-template-columns: 398px 242px 1fr;
-  gap: 12px;
+    display: grid;
+    grid-template-columns: 398px 242px 1fr;
+    gap: 12px;
 }
 
 main .card {
-  background: var(--color-white);
-  border-radius: var(--card-border-radius);
-  padding: 20px;
+    background: var(--color-white);
+    border-radius: var(--card-border-radius);
+    padding: 20px;
 }
 
-main .chart > div {
-  display: flex;
-  justify-content: space-between;
+main .chart>div {
+    display: flex;
+    justify-content: space-between;
 }
 
 main .card:hover {
-  box-shadow: var(--box-shadow);
-  transition: all 300ms ease;
-  --moz-transition: all 300ms ease;
-  -o-transition: all 300ms ease;
+    box-shadow: var(--box-shadow);
+    transition: all 300ms ease;
+    --moz-transition: all 300ms ease;
+    -o-transition: all 300ms ease;
 }
 
 .bar {
-  border: 1px solid var(--color-vertical-bar);
-  height: 119px;
-  position: relative;
-  top: 6px;
+    border: 1px solid var(--color-vertical-bar);
+    height: 119px;
+    position: relative;
+    top: 6px;
 }
 
-main .chart > div i {
-  font-size: 16px;
+main .chart>div i {
+    font-size: 16px;
 }
 
-main .chart > div .title h3 {
-  font-size: 18px;
-  font-weight: 600;
+main .chart>div .title h3 {
+    font-size: 18px;
+    font-weight: 600;
 }
 
-main .chart > div .title p {
-  font-size: 14px;
+main .chart>div .title p {
+    font-size: 14px;
 }
 
-main .chart > div.sales {
-  align-items: center;
-  justify-content: space-around;
+main .chart>div.sales {
+    align-items: center;
+    justify-content: space-around;
 }
 
-main .chart > div.sales .left {
-  position: relative;
-  left: 10px;
-  height: 60px;
-  width: 60px;
+main .chart>div.sales .left {
+    position: relative;
+    left: 10px;
+    height: 60px;
+    width: 60px;
 }
 
 .sales .right .right-bottom small {
-  display: flex;
-  text-align: center;
-  align-items: center;
+    display: flex;
+    text-align: center;
+    align-items: center;
 }
 
 .sales .right .right-bottom span {
-  display: flex;
-  align-items: center;
-  padding-right: 8px;
+    display: flex;
+    align-items: center;
+    padding-right: 8px;
 }
 
 .sales .right .right-bottom h1 {
-  margin-top: 30px;
+    margin-top: 30px;
 }
 
-main .chart > div.profit,
-main .chart > div.country-status {
-  flex-direction: column;
+main .chart>div.profit,
+main .chart>div.country-status {
+    flex-direction: column;
 }
 
-main .chart > div.profit .left {
-  margin-right: 22px;
+main .chart>div.profit .left {
+    margin-right: 22px;
 }
 
-main .chart > div.profit .top {
-  display: flex;
+main .chart>div.profit .top {
+    display: flex;
 }
 
-main .chart > div .country {
-  display: grid;
-  grid-template-columns: 45px 1fr 1fr 55px;
-  gap: 1rem;
+main .chart>div .country {
+    display: grid;
+    grid-template-columns: 45px 1fr 1fr 55px;
+    gap: 1rem;
 }
 
-main .chart > div .country figure {
-  height: 34px;
-  width: 34px;
+main .chart>div .country figure {
+    height: 34px;
+    width: 34px;
 }
 
-main .chart > div .country .status {
-  display: flex;
-  align-items: center;
+main .chart>div .country .status {
+    display: flex;
+    align-items: center;
 }
 
 .progress-bar {
-  border: 1px solid var(--color-bg-progress-bar);
-  border-radius: 10px;
-  height: 6px;
-  position: relative;
-  background: var(--color-bg-progress-bar);
-  top: 14px;
+    border: 1px solid var(--color-bg-progress-bar);
+    border-radius: 10px;
+    height: 6px;
+    position: relative;
+    background: var(--color-bg-progress-bar);
+    top: 14px;
 }
 
 .progress {
-  border: 3px solid var(--color-info);
-  border-radius: 10px;
-  display: block;
-  height: 100%;
-  background-color: var(--color-info);
-  position: relative;
-  overflow: hidden;
-  top: -1px;
+    border: 3px solid var(--color-info);
+    border-radius: 10px;
+    display: block;
+    height: 100%;
+    background-color: var(--color-info);
+    position: relative;
+    overflow: hidden;
+    top: -1px;
 }
 
-main .chart > div .country.usa .progress {
-  width: 50%;
+main .chart>div .country.usa .progress {
+    width: 50%;
 }
 
-main .chart > div .country.brz .progress {
-  width: 35%;
+main .chart>div .country.brz .progress {
+    width: 35%;
 }
 
-main .chart > div .country.aus .progress {
-  width: 20%;
+main .chart>div .country.aus .progress {
+    width: 20%;
 }
 
 /* -------------------------- CHART ENDS HERE ------------------------ */
 
+main .insights .card {
+    margin: 18px 0;
+}
+
 main .insights .user-info {
-  margin: 18px 0;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
 main .insights .user-info .circle {
-  display: inline-block;
-  height: 58px;
-  width: 58px;
-  border-radius: 50%;
-  border: 7px solid var(--color-circle);
-  background: var(--color-bg-circle);
+    display: inline-block;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    border: 5px solid var(--color-circle);
+    background: var(--color-bg-circle);
 }
 
 .insights .user-info .user-icon {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .insights .user-info .order-count {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 3rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
 }
 
 .insights .user-info .order-count h1 {
-  font-size: 24px;
-  margin-bottom: 5px;
+    font-size: 24px;
+    margin-bottom: 5px;
 }
 
 .insights .user-info .order-count small {
-  font-size: 13px;
+    font-size: 13px;
 }
 
 .insights .user-info .block-title {
-  font-size: 13px;
-  display: inline-block;
-  margin-bottom: 16px;
+    font-size: 13px;
+    display: inline-block;
+    margin-bottom: 16px;
 }
 
-.insights .user-info .user-data > h5 {
-  font-size: 18px;
-  font-weight: 600;
+.insights .user-info .user-data>h5 {
+    font-size: 18px;
+    font-weight: 600;
 }
 
-.insights .user-info .user-data > p {
-  font-size: 15px;
-  font-weight: 400;
+.insights .user-info .user-data>p {
+    font-size: 15px;
+    font-weight: 400;
 }
 
 .user-info .left .user-data {
-  margin-left: 16px;
+    margin-left: 16px;
 }
 
-.insights .user-info .middle ul > li {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  column-gap: 1.3rem;
-  line-height: 2;
+.insights .user-info .middle ul>li {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 1.3rem;
+    line-height: 2;
 }
 
 .insights .user-info .right p {
-  margin-bottom: 9px;
+    margin-bottom: 9px;
 }
+
+/* ----------------------------------------------TABS---------------------------------------- */
+
+.tabs {
+    margin-bottom: 10px;
+}
+
+.tab {
+    background-color: #f2f2f2;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    transition: background-color 0.3s;
+}
+
+.tab.active {
+    background-color: #ccc;
+}
+
+.order-lists {
+    margin-top: 10px;
+}
+
+.tab-content {
+    display: none;
+}
+
+.order-lists .tab-content {
+    display: none;
+}
+
+/* ------------------------SEARCH----------------------------  */
+
+#inputSearch {
+    background-image: url('/assets/images/search-icon.png');
+    background-position: 158px 10px;
+    background-repeat: no-repeat;
+    font-size: 16px;
+    padding: 12px;
+    background-color: var(--color-white);
+    margin-bottom: 12px;
+    border-radius: var(--br-4);
+    border: none;
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.04);
+}
+
