@@ -22,6 +22,10 @@
 
     <!-- Stylesheet -->
     <link rel="stylesheet" href="./assets/css/style.css" />
+
+    <!-- Scripts -->
+    <script type="text/javascript" src="/assets/js/tabSelection.js"></script>
+
   </head>
   <body>
     <div class="page-content">
@@ -39,7 +43,7 @@
             <img src="./assets/images/indent-decrease.png" alt="" />
           </div>
         </div>
-        <!-- ----------------------------SIDEBAR ---------------------------- -->
+        <!-- ----------------------------SIDEBAR STARTS HERE ---------------------------- -->
         <div class="sidebar">
           <div class="main-menu-wrapper">
             <span class="menu block-title text-muted">Main Menu</span>
@@ -73,6 +77,7 @@
 
     <main>
         <div class="container">
+            <!-- -----------------------NAVBAR STARTS HERE------------------------ -->
             <div class="navbar">
                 <h1 class="page-title">Dashboard</h1>
                 <div class="actions">
@@ -88,7 +93,7 @@
                     </div>
                 </div>
             </div>
-            <!-- -----------------------NAVBAR ENDS HERE------------------------ -->
+            <!-- -----------------------INSIGHTS STARTS HERE------------------------ -->
             <div class="insights">
                 <div class="chart">
                     <!-- -----------------------SALES STARTS HERE------------------------ -->
@@ -200,59 +205,204 @@
                         </div>
                     </div>
                 </div>
-                <!-- -----------------------USER INFO STARTS HERE------------------------ -->
-                <div class="card user-info">
-                    <div class="left">
-                        <div class="user-icon">
-                            <span class="circle"></span>
-                            <div class="user-data">
-                                <h5>Robert Fox</h5>
-                                <p class="text-muted">robert@gmail.com</p>
+                <div class="card">
+                    <!-- -----------------------USER INFO STARTS HERE------------------------ -->
+                    <div class="user-info">
+                        <div class="left">
+                            <div class="user-icon">
+                                <span class="circle"></span>
+                                <div class="user-data">
+                                    <h5>Robert Fox</h5>
+                                    <p class="text-muted">robert@gmail.com</p>
+                                </div>
+                            </div>
+                        </div>
+                        <span class="bar"></span>
+                        <div class="middle">
+                            <span class="block-title text-muted">personal information</span>
+                            <ul>
+                                <li>
+                                    <span>Contact Number</span>
+                                    <span>(201)555-0124</span>
+                                </li>
+                                <li>
+                                    <span>Date of Birth</span>
+                                    <span>1 Jan, 1985</span>
+                                </li>
+                                <li>
+                                    <span>Member Since</span>
+                                    <span>3 March, 2023</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <span class="bar"></span>
+                        <div class="right">
+                            <span class="block-title text-muted">shipping address</span>
+                            <p>3517 W. Gray St. Utica, Pennsylvania 57867</p>
+                            <div class="order-count">
+                                <span class="total-order">
+                                    <h1>150</h1>
+                                    <small class="text-muted">Total Order</small>
+                                </span>
+                                <span class="completed-order">
+                                    <h1>140</h1>
+                                    <small class="text-muted">Completed</small>
+                                </span>
+                                <span class="canceled-order">
+                                    <h1>10</h1>
+                                    <small class="text-muted">Canceled</small>
+                                </span>
                             </div>
                         </div>
                     </div>
-                    <span class="bar"></span>
-                    <div class="middle">
-                        <span class="block-title text-muted">personal information</span>
-                        <ul>
-                            <li>
-                                <span>Contact Number</span>
-                                <span>(201)555-0124</span>
-                            </li>
-                            <li>
-                                <span>Date of Birth</span>
-                                <span>1 Jan, 1985</span>
-                            </li>
-                            <li>
-                                <span>Member Since</span>
-                                <span>3 March, 2023</span>
-                            </li>
-                        </ul>
-                    </div>
-                    <span class="bar"></span>
-                    <div class="right">
-                        <span class="block-title text-muted">shipping address</span>
-                        <p>3517 W. Gray St. Utica, Pennsylvania 57867</p>
-                        <div class="order-count">
-                            <span class="total-order">
-                                <h1>150</h1>
-                                <small class="text-muted">Total Order</small>
-                            </span>
-                            <span class="completed-order">
-                                <h1>140</h1>
-                                <small class="text-muted">Completed</small>
-                            </span>
-                            <span class="canceled-order">
-                                <h1>10</h1>
-                                <small class="text-muted">Canceled</small>
-                            </span>
-                        </div>
+                    <!-- -----------------------TABS START HERE------------------------ -->
+                    <div class="tabs">
+                        <button class="tab active" onclick="changeTab(event, 'tab1')">Tab 1</button>
+                        <button class="tab" onclick="changeTab(event, 'tab2')">Tab 2</button>
+                        <button class="tab" onclick="changeTab(event, 'tab3')">Tab 3</button>
                     </div>
                 </div>
-                <!-- -----------------------USER INFO ENDS HERE------------------------ -->
             </div>
-        <!-- -----------------------INSIGHTS ENDS HERE------------------------ -->
+            <!-- -----------------------ORDER DETAIL STARTS HERE------------------------ -->
+            <div class="order-details">
+                <div class="search-filter-bar">
+                    <div class="status-filter">
 
+
+                    </div>
+                    <div class="search-bar">
+                        <input type="text" id="inputSearch" 
+                        onkeyup="searchOrder()" 
+                        placeholder="Search...">
+                        <!-- <i class="material-icons-outlined">
+                            search
+                        </i> -->
+                    </div>
+                    <div class="data-range-filter">
+
+                    </div>
+                </div>
+                <div class="order-lists">
+                    <div id="tab1" class="tab-content">
+                        <table id="orderLists">
+                            <thead>
+                                <tr>
+                                    <th class="block-title">ID</th>
+                                    <th class="block-title">customer</th>
+                                    <th class="block-title">date</th>
+                                    <th class="block-title">total</th>
+                                    <th class="block-title">method</th>
+                                    <th class="block-title">status</th>
+                                    <th class="block-title">action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>#5089</td>
+                                    <td>Joseph Wheeler</td>
+                                    <td>6 April, 2023</td>
+                                    <td>$2,564</td>
+                                    <td>CC</td>
+                                    <td class="warning">Pending</td>
+                                    <td class="info">View Details</td>
+                                </tr>
+                                <tr>
+                                    <td>#5089</td>
+                                    <td>Joseph Wheeler</td>
+                                    <td>6 April, 2023</td>
+                                    <td>$2,564</td>
+                                    <td>CC</td>
+                                    <td class="warning">Pending</td>
+                                    <td class="info">View Details</td>
+                                </tr>
+                                <tr>
+                                    <td>#5089</td>
+                                    <td>Joseph Wheeler</td>
+                                    <td>6 April, 2023</td>
+                                    <td>$2,564</td>
+                                    <td>CC</td>
+                                    <td class="warning">Pending</td>
+                                    <td class="info">View Details</td>
+                                </tr>
+                                <tr>
+                                    <td>#5089</td>
+                                    <td>Joseph Wheeler</td>
+                                    <td>6 April, 2023</td>
+                                    <td>$2,564</td>
+                                    <td>CC</td>
+                                    <td class="warning">Pending</td>
+                                    <td class="info">View Details</td>
+                                </tr>
+                                <tr>
+                                    <td>#5089</td>
+                                    <td>Joseph Wheeler</td>
+                                    <td>6 April, 2023</td>
+                                    <td>$2,564</td>
+                                    <td>CC</td>
+                                    <td class="warning">Pending</td>
+                                    <td class="info">View Details</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div id="tab2" class="tab-content">Content 2</div>
+                    <div id="tab3" class="tab-content">Content 3</div>
+                    <div>Showing
+                        <select>
+                            <option value="1"></option>
+                            <option value="2"></option>
+                            <option value="3"></option>
+                            <option value="4"></option>
+                            <option value="5"></option>
+                            <option value="6"></option>
+                            <option value="7"></option>
+                            <option value="8"></option>
+                            <option value="9"></option>
+                            <option value="10"></option>
+                            <option value="11"></option>
+                            <option value="12"></option>
+                            <option value="13"></option>
+                            <option value="14"></option>
+                            <option value="15"></option>
+                            <option value="16"></option>
+                            <option value="17"></option>
+                            <option value="18"></option>
+                            <option value="19"></option>
+                            <option value="20"></option>
+                            <option value="21"></option>
+                            <option value="22"></option>
+                            <option value="23"></option>
+                            <option value="24"></option>
+                            <option value="25"></option>
+                            <option value="26"></option>
+                            <option value="27"></option>
+                            <option value="28"></option>
+                            <option value="29"></option>
+                            <option value="30"></option>
+                            <option value="31"></option>
+                            <option value="32"></option>
+                            <option value="33"></option>
+                            <option value="34"></option>
+                            <option value="35"></option>
+                            <option value="36"></option>
+                            <option value="37"></option>
+                            <option value="38"></option>
+                            <option value="39"></option>
+                            <option value="40"></option>
+                            <option value="41"></option>
+                            <option value="42"></option>
+                            <option value="43"></option>
+                            <option value="44"></option>
+                            <option value="45"></option>
+                            <option value="46"></option>
+                            <option value="47"></option>
+                            <option value="48"></option>
+                            <option value="49"></option>
+                        </select>
+                        of 50
+                    </div>
+                </div>
+            </div>
 
         </div>
     </main>
