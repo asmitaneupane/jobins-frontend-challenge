@@ -525,7 +525,7 @@ main .insights .user-info .circle {
     grid-template-columns: 150px 200px 1fr;
 }
 
-/* ------------------------Dropdown----------------------------  */
+/* ------------------------Status Filter----------------------------  */
 
 .dropbtn {
     background-color: var(--color-white);
@@ -546,16 +546,17 @@ main .insights .user-info .circle {
     background-position: 100px center;
 }
 
-.dropbtn:hover,
+/* .dropbtn:hover,
 .dropbtn:focus {
     background-color: var(--color-bright);
     border: none;
-}
+} */
 
+/* 
 .dropdown {
     position: relative;
     display: inline-block;
-}
+} */
 
 /* ------------------------SEARCH----------------------------  */
 
@@ -607,10 +608,6 @@ main .insights .user-info .circle {
     background-repeat: no-repeat;
     background-position: 145px center;
     width: 180px;
-}
-
-.hidden {
-    display: none;
 }
 
 /* ----------------------------------------ORDER HISTORY---------------------------------- */

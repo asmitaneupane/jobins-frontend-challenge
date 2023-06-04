@@ -1,5 +1,4 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // JavaScript code to handle the date range filtering
     document.getElementById("dateRangeFilter").addEventListener("change", function () {
         var selectedValue = this.value;
         var rows = document.getElementById("tableBody").getElementsByTagName("tr");
@@ -7,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
         var visibleRowCount = 0; // Track the number of visible rows
 
         for (var i = 0; i < rows.length; i++) {
-            var dateCell = rows[i].getElementsByTagName("td")[2]; // Assuming date cell is always at index 2
+            var dateCell = rows[i].getElementsByTagName("td")[2]; // Assuming date cell is at index 2
 
             if (dateCell) {
                 var dateString = dateCell.textContent.trim();

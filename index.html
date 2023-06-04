@@ -22,7 +22,7 @@
 
     <!-- Scripts -->
     <script type="text/javascript" src="/assets/js/tabSelection.js"></script>
-    <script type="text/javascript" src="/assets/js/orderStatusDropdown.js"></script>
+    <script type="text/javascript" src="/assets/js/orderStatusFilter.js"></script>
     <script type="text/javascript" src="/assets/js/searchTable.js"></script>
     <script type="text/javascript" src="/assets/js/dateRangeFilter.js"></script>
     <script type="text/javascript" src="/assets/js/pagination.js"></script>
@@ -269,13 +269,11 @@
                 <div class="order-details">
                     <div class="search-filter-bar">
                         <div class="status-filter">
-                            <div class="dropdown">
-                                <select name="" id="" class="dropbtn">
-                                    <option selected value="All">Status: All</option>
-                                    <option value="Completed">Completed</option>
-                                    <option value="Pending">Pending</option>
-                                </select>
-                            </div>
+                            <select name="" id="statusFilter" class="dropbtn">
+                                <option selected value="All">Status: All</option>
+                                <option value="Completed">Completed</option>
+                                <option value="Pending">Pending</option>
+                            </select>
                         </div>
                         <div class="search-bar">
                             <input type="text" id="inputSearch" onkeyup="searchOrder()" placeholder="Search...">
