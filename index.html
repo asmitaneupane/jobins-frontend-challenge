@@ -23,7 +23,9 @@
     <!-- Scripts -->
     <script type="text/javascript" src="/assets/js/tabSelection.js"></script>
     <script type="text/javascript" src="/assets/js/orderStatusDropdown.js"></script>
+    <script type="text/javascript" src="/assets/js/searchTable.js"></script>
     <script type="text/javascript" src="/assets/js/dateRangeFilter.js"></script>
+    <script type="text/javascript" src="/assets/js/pagination.js"></script>
 
 </head>
 
@@ -268,7 +270,7 @@
                     <div class="search-filter-bar">
                         <div class="status-filter">
                             <div class="dropdown">
-                                <button onclick="checkStatus()" class="dropbtn">Status: All
+                                <!-- <button onclick="checkStatus()" >Status: All
                                     <span class="material-icons-outlined">
                                         expand_less
                                     </span>
@@ -276,7 +278,12 @@
                                 <div id="orderStatus" class="dropdown-content">
                                     <a href="#">Completed</a>
                                     <a href="#">Pending</a>
-                                </div>
+                                </div> -->
+                                <select name="" id="" class="dropbtn">
+                                    <option selected value="All">Status: All</option>
+                                    <option value="Completed">Completed</option>
+                                    <option value="Pending">Pending</option>
+                                </select>
                             </div>
                         </div>
                         <div class="search-bar">
@@ -289,7 +296,7 @@
                             <div class="dropdown">
                                 <button onclick="filterByDate()" class="dateFilter">Filter by date range
                                     <span class="material-icons-outlined">
-                                        expand_less
+                                        expand_more
                                     </span>
                                 </button>
                                 <div class="select-range">
@@ -317,7 +324,7 @@
                                         <th class="block-title">action</th>
                                     </tr>
                                 </thead>
-                                <tbody>
+                                <tbody id="tableBody">
                                     <tr>
                                         <td>#5089</td>
                                         <td>Joseph Wheeler</td>
@@ -361,6 +368,42 @@
                                         <td>$2,564</td>
                                         <td>CC</td>
                                         <td class="warning">Pending</td>
+                                        <td class="info">View Details</td>
+                                    </tr>
+                                    <tr>
+                                        <td>#5089</td>
+                                        <td>Joseph Wheeler</td>
+                                        <td>6 April, 2023</td>
+                                        <td>$2,564</td>
+                                        <td>CC</td>
+                                        <td class="success">Completed</td>
+                                        <td class="info">View Details</td>
+                                    </tr>
+                                    <tr>
+                                        <td>#5089</td>
+                                        <td>Joseph Wheeler</td>
+                                        <td>6 April, 2023</td>
+                                        <td>$2,564</td>
+                                        <td>CC</td>
+                                        <td class="success">Completed</td>
+                                        <td class="info">View Details</td>
+                                    </tr>
+                                    <tr>
+                                        <td>#5089</td>
+                                        <td>Joseph Wheeler</td>
+                                        <td>6 April, 2023</td>
+                                        <td>$2,564</td>
+                                        <td>CC</td>
+                                        <td class="danger">Canceled</td>
+                                        <td class="info">View Details</td>
+                                    </tr>
+                                    <tr>
+                                        <td>#5089</td>
+                                        <td>Joseph Wheeler</td>
+                                        <td>6 April, 2023</td>
+                                        <td>$2,564</td>
+                                        <td>CC</td>
+                                        <td class="danger">Canceled</td>
                                         <td class="info">View Details</td>
                                     </tr>
                                 </tbody>
@@ -368,59 +411,25 @@
                         </div>
                         <div id="tab2" class="tab-content">Content 2</div>
                         <div id="tab3" class="tab-content">Content 3</div>
-                        <div>Showing
-                            <select>
-                                <option value="1"></option>
-                                <option value="2"></option>
-                                <option value="3"></option>
-                                <option value="4"></option>
-                                <option value="5"></option>
-                                <option value="6"></option>
-                                <option value="7"></option>
-                                <option value="8"></option>
-                                <option value="9"></option>
-                                <option value="10"></option>
-                                <option value="11"></option>
-                                <option value="12"></option>
-                                <option value="13"></option>
-                                <option value="14"></option>
-                                <option value="15"></option>
-                                <option value="16"></option>
-                                <option value="17"></option>
-                                <option value="18"></option>
-                                <option value="19"></option>
-                                <option value="20"></option>
-                                <option value="21"></option>
-                                <option value="22"></option>
-                                <option value="23"></option>
-                                <option value="24"></option>
-                                <option value="25"></option>
-                                <option value="26"></option>
-                                <option value="27"></option>
-                                <option value="28"></option>
-                                <option value="29"></option>
-                                <option value="30"></option>
-                                <option value="31"></option>
-                                <option value="32"></option>
-                                <option value="33"></option>
-                                <option value="34"></option>
-                                <option value="35"></option>
-                                <option value="36"></option>
-                                <option value="37"></option>
-                                <option value="38"></option>
-                                <option value="39"></option>
-                                <option value="40"></option>
-                                <option value="41"></option>
-                                <option value="42"></option>
-                                <option value="43"></option>
-                                <option value="44"></option>
-                                <option value="45"></option>
-                                <option value="46"></option>
-                                <option value="47"></option>
-                                <option value="48"></option>
-                                <option value="49"></option>
-                            </select>
-                            of 50
+                        <div class="bottom-row">
+                            <div class="page-count">Showing
+                                <select>
+                                    <option selected value="10">10</option>
+                                    <option value="20">20</option>
+                                    <option value="30">30</option>
+                                    <option value="40">40</option>
+                                </select>
+                                of 50
+                            </div>
+                            <div id="pagination">
+                                <button id="prevBtn"><span class="material-icons-outlined">
+                                        navigate_before
+                                    </span></button>
+                                <div id="pageButtons"></div>
+                                <button id="nextBtn"><span class="material-icons-outlined">
+                                        navigate_next
+                                    </span></button>
+                            </div>
                         </div>
                     </div>
                 </div>
