@@ -516,6 +516,8 @@ main .insights .user-info .circle {
 
 .order-lists .tab-content {
     display: none;
+    text-align: center;
+    padding-block: 24px;
 }
 
 .search-filter-bar {
@@ -581,10 +583,17 @@ main .insights .user-info .circle {
 
 /* ------------------------DATE RANGE FILTER----------------------------  */
 
-.dateFilter {
+.date-range-filter {
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    /* display: inline-block; */
+}
+
+.date-filter {
     background-color: var(--color-white);
     color: var(--color-secondary);
-    padding: 9px;
+    padding: 12px;
     font-size: 15px;
     font-weight: 500;
     border: none;
@@ -593,14 +602,14 @@ main .insights .user-info .circle {
     display: flex;
     align-items: center;
     box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.04);
+    appearance: none;
+    background-image: url("/assets/images/dropdown.png");
+    background-repeat: no-repeat;
+    background-position: 145px center;
+    width: 180px;
 }
 
-.date-range-filter {
-    display: flex;
-    justify-content: flex-end;
-}
-
-.select-range {
+.hidden {
     display: none;
 }
 
@@ -621,8 +630,6 @@ main .order-details .order-lists:hover {
 
 main .order-lists table {
     width: 100%;
-    padding-block: 24px;
-    text-align: center;
 }
 
 main table tbody td {

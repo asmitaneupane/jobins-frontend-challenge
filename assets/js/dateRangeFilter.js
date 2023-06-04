@@ -1,139 +1,97 @@
+document.addEventListener("DOMContentLoaded", function () {
+    // JavaScript code to handle the date range filtering
+    document.getElementById("dateRangeFilter").addEventListener("change", function () {
+        var selectedValue = this.value;
+        var rows = document.getElementById("tableBody").getElementsByTagName("tr");
 
+        var visibleRowCount = 0; // Track the number of visible rows
 
-mobiscroll.setOptions({
-    theme: 'ios',
-    themeVariant: 'light'
-});
+        for (var i = 0; i < rows.length; i++) {
+            var dateCell = rows[i].getElementsByTagName("td")[2]; // Assuming date cell is always at index 2
 
-var formatDate = mobiscroll.util.datetime.formatDate;
-var startDate = '2023-06-03T00:00';
-var endDate = '2023-06-09T00:00';
-var dateInput = document.getElementById('date-filtering');
-var startInput = document.getElementById('date-filtering-start');
-var endInput = document.getElementById('date-filtering-end');
+            if (dateCell) {
+                var dateString = dateCell.textContent.trim();
+                var date = new Date(dateString);
 
-var now = new Date();
-var day = now.getDay();
-var monday = now.getDate() - day + (day === 0 ? -6 : 1);
+                var isVisible = false;
 
-var select = mobiscroll.select('#date-filtering-select', {
-    inputElement: document.getElementById('date-select-input'),
-    responsive: {
-        xsmall: {
-            touchUi: true
-        },
-        small: {
-            touchUi: false
-        }
-    },
-    onChange: function (event) {
-        var selected = event.value;
+                switch (selectedValue) {
+                    case "today":
+                        isVisible = isToday(date);
+                        break;
+                    case "this week":
+                        isVisible = isThisWeek(date);
+                        break;
+                    case "last week":
+                        isVisible = isLastWeek(date);
+                        break;
+                    case "this month":
+                        isVisible = isThisMonth(date);
+                        break;
+                    default:
+                        isVisible = true;
+                        break;
+                }
 
-        if (selected === 'custom') {
-            disableInputs(false);
-        } else {
-            disableInputs(true);
+                if (isVisible) {
+                    rows[i].style.display = "";
+                    visibleRowCount++;
+                } else {
+                    rows[i].style.display = "none";
+                }
 
-            switch (selected) {
-                case 'today':
-                    calendar.setVal(['2023-06-03T00:00', '2023-06-03T00:00']);
-                    break;
-                case 'yesterday':
-                    calendar.setVal(['2023-06-02T00:00', '2023-06-02T00:00']);
-                    break;
-                case 'last-week':
-                    calendar.setVal([new Date(now.getFullYear(), now.getMonth(), monday - 7), new Date(now.getFullYear(), now.getMonth(), monday - 1)]);
-                    break;
-                case 'last-month':
-                    calendar.setVal(['2023-05-01T00:00', '2023-05-31T00:00']);
-                    break;
-                case 'last-7-days':
-                    calendar.setVal(['2023-05-28T00:00', '2023-06-03T00:00']);
-                    break;
-                case 'last-30-days':
-                    calendar.setVal(['2023-05-05T00:00', '2023-06-03T00:00']);
-                    break;
+                console.log("Row", i + 1, "- Date:", dateString, "Visible:", isVisible);
             }
         }
-    }
-});
 
-function disableInputs(disable) {
-    var startInst = mobiscroll.getInst(startInput);
-    var endInst = mobiscroll.getInst(endInput);
-
-    startInst.setOptions({ disabled: disable });
-    endInst.setOptions({ disabled: disable });
-}
-
-var calendar = mobiscroll.datepicker('#date-filtering-calendar', {
-    controls: ['calendar'],
-    select: 'range',
-    display: 'inline',
-    showRangeLabels: false,
-    pages: 'auto',
-    startInput: '#date-filtering-start',
-    endInput: '#date-filtering-end',
-    returnFormat: 'iso8601',
-    showOnClick: false,
-    showOnFocus: false,
-    onInit: function (event, inst) {
-        inst.setVal([startDate, endDate]);
-        setInputValue(startDate, endDate, inst.s.dateFormat)
-    },
-    onChange: function () {
-        disableInputs(false);
-        select.setVal('custom');
-    }
-});
-
-var popup = mobiscroll.popup('#date-filtering-popup', {
-    responsive: {
-        xsmall: {
-            display: 'bottom',
-            touchUi: true,
-            buttons: [{
-                    text: 'Apply',
-                    handler: function (event) {
-                        var date = calendar.getVal();
-
-                        setInputValue(date[0], date[1] || date[0], calendar.s.dateFormat);
-                        popup.close();
-                    }
-                },
-                'cancel'
-            ]
-        },
-        custom: {
-            breakpoint: 559,
-            buttons: [],
-            display: 'anchored',
-            anchor: dateInput,
-            anchorAlign: 'start',
-            touchUi: false,
-            scrollLock: false,
-            showArrow: false,
-            maxWidth: 920
+        console.log("Visible row count:", visibleRowCount);
+        if (visibleRowCount === 0) {
+            console.log("No rows match the selected date range.");
         }
+    });
+
+    // Helper function to check if a date is today
+    function isToday(date) {
+        var today = new Date();
+        return date.toLocaleDateString() === today.toLocaleDateString();
+    }
+
+    // Helper function to check if a date is within the current week
+    function isThisWeek(date) {
+        var today = new Date();
+        var firstDayOfWeek = today.getDate() - today.getDay();
+        var lastDayOfWeek = firstDayOfWeek + 6;
+
+        var dateDay = date.getDate();
+        return (
+            dateDay >= firstDayOfWeek &&
+            dateDay <= lastDayOfWeek &&
+            date.getMonth() === today.getMonth() &&
+            date.getFullYear() === today.getFullYear()
+        );
+    }
+
+    // Helper function to check if a date is within the previous week
+    function isLastWeek(date) {
+        var today = new Date();
+        var firstDayOfPrevWeek = today.getDate() - today.getDay() - 7;
+        var lastDayOfPrevWeek = firstDayOfPrevWeek + 6;
+
+        var dateDay = date.getDate();
+        return (
+            dateDay >= firstDayOfPrevWeek &&
+            dateDay <= lastDayOfPrevWeek &&
+            date.getMonth() === today.getMonth() &&
+            date.getFullYear() === today.getFullYear()
+        );
+    }
+
+    // Helper function to check if a date is within the current month
+    function isThisMonth(date) {
+        var today = new Date();
+        return (
+            date.getMonth() === today.getMonth() &&
+            date.getFullYear() === today.getFullYear()
+        );
     }
 });
-
-function setInputValue(start, end, dateFormat) {
-    dateInput.value = formatDate(dateFormat, new Date(start)) + ' - ' + formatDate(dateFormat, new Date(end));
-}
-
-dateInput.addEventListener('click', function () {
-    popup.open();
-});
-
-document.addEventListener('click', function (e) {
-    if (e.target && e.target.classList.contains('apply-button')) {
-        var date = calendar.getVal();
-
-        setInputValue(date[0], date[1] || date[0], calendar.s.dateFormat);
-        popup.close();
-    } else if (e.target && e.target.classList.contains('cancel-button')) {
-        popup.close();
-    }
-});
-

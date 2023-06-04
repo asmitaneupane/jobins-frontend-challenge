@@ -270,15 +270,6 @@
                     <div class="search-filter-bar">
                         <div class="status-filter">
                             <div class="dropdown">
-                                <!-- <button onclick="checkStatus()" >Status: All
-                                    <span class="material-icons-outlined">
-                                        expand_less
-                                    </span>
-                                </button>
-                                <div id="orderStatus" class="dropdown-content">
-                                    <a href="#">Completed</a>
-                                    <a href="#">Pending</a>
-                                </div> -->
                                 <select name="" id="" class="dropbtn">
                                     <option selected value="All">Status: All</option>
                                     <option value="Completed">Completed</option>
@@ -293,21 +284,13 @@
                             </i>
                         </div>
                         <div class="date-range-filter">
-                            <div class="dropdown">
-                                <button onclick="filterByDate()" class="dateFilter">Filter by date range
-                                    <span class="material-icons-outlined">
-                                        expand_more
-                                    </span>
-                                </button>
-                                <div class="select-range">
-                                    <input type="text" id="min-date" class="date-range-filter"
-                                        placeholder="From: yyyy-mm-dd">
-
-                                    <input type="text" id="max-date" class="date-range-filter"
-                                        placeholder="To: yyyy-mm-dd">
-                                </div>
-                            </div>
-
+                            <select name="" id="dateRangeFilter" class="date-filter">
+                                <option selected value="">Filter by date range</option>
+                                <option value="today" class="select-range">Today</option>
+                                <option value="this week" class="select-range">This Week</option>
+                                <option value="last week" class="select-range">Last Week</option>
+                                <option value="this month" class="select-range">This Month</option>
+                            </select>
                         </div>
                     </div>
                     <div class="order-lists">
@@ -326,6 +309,15 @@
                                 </thead>
                                 <tbody id="tableBody">
                                     <tr>
+                                        <td>#1</td>
+                                        <td>Joseph Wheeler</td>
+                                        <td>4 June, 2023</td>
+                                        <td>$2,564</td>
+                                        <td>CC</td>
+                                        <td class="warning">Pending</td>
+                                        <td class="info">View Details</td>
+                                    </tr>
+                                    <tr>
                                         <td>#5089</td>
                                         <td>Joseph Wheeler</td>
                                         <td>6 April, 2023</td>
@@ -404,13 +396,45 @@
                                         <td>$2,564</td>
                                         <td>CC</td>
                                         <td class="danger">Canceled</td>
+                                        <td class="info">View Details</td>
+                                    </tr>
+                                    <tr>
+                                        <td>#1</td>
+                                        <td>Joseph Wheeler</td>
+                                        <td>5 June, 2023</td>
+                                        <td>$2,564</td>
+                                        <td>CC</td>
+                                        <td class="warning">Pending</td>
+                                        <td class="info">View Details</td>
+                                    </tr>
+                                    <tr>
+                                        <td>#1</td>
+                                        <td>Joseph Wheeler</td>
+                                        <td>1 June, 2023</td>
+                                        <td>$2,564</td>
+                                        <td>CC</td>
+                                        <td class="warning">Pending</td>
+                                        <td class="info">View Details</td>
+                                    </tr>
+                                    <tr>
+                                        <td>#1</td>
+                                        <td>Joseph Wheeler</td>
+                                        <td>1 May, 2023</td>
+                                        <td>$2,564</td>
+                                        <td>CC</td>
+                                        <td class="warning">Pending</td>
                                         <td class="info">View Details</td>
                                     </tr>
                                 </tbody>
                             </table>
                         </div>
-                        <div id="tab2" class="tab-content">Content 2</div>
-                        <div id="tab3" class="tab-content">Content 3</div>
+                        <div id="tab2" class="tab-content">
+                            <h3>This is the Completed List!</h3>
+                        </div>
+                        <div id="tab3" class="tab-content">
+                            <h3>This is the Canceled List!</h3>
+                        </div>
+                        <!-- -----------------------BOTTOM ROW STARTS HERE------------------------ -->
                         <div class="bottom-row">
                             <div class="page-count">Showing
                                 <select>
@@ -433,8 +457,8 @@
                         </div>
                     </div>
                 </div>
-
             </div>
+            <!-- -----------------------CONTAINER ENDS HERE------------------------ -->
         </main>
     </div>
 </body>
