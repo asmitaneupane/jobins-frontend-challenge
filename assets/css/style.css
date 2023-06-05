@@ -520,6 +520,10 @@ main .insights .user-info .circle {
     padding-block: 24px;
 }
 
+.order-lists .tab-content.active {
+    display: block;
+}
+
 .search-filter-bar {
     display: grid;
     grid-template-columns: 150px 200px 1fr;
@@ -546,18 +550,6 @@ main .insights .user-info .circle {
     background-position: 100px center;
 }
 
-/* .dropbtn:hover,
-.dropbtn:focus {
-    background-color: var(--color-bright);
-    border: none;
-} */
-
-/* 
-.dropdown {
-    position: relative;
-    display: inline-block;
-} */
-
 /* ------------------------SEARCH----------------------------  */
 
 #inputSearch {
@@ -568,6 +560,7 @@ main .insights .user-info .circle {
     border-radius: var(--br-4);
     border: none;
     box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.04);
+    width: 200px;
 }
 
 .search-bar {

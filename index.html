@@ -22,10 +22,11 @@
 
     <!-- Scripts -->
     <script type="text/javascript" src="/assets/js/tabSelection.js"></script>
-    <script type="text/javascript" src="/assets/js/orderStatusFilter.js"></script>
+    <script type="text/javascript" src="/assets/js/statusFilter.js"></script>
     <script type="text/javascript" src="/assets/js/searchTable.js"></script>
     <script type="text/javascript" src="/assets/js/dateRangeFilter.js"></script>
     <script type="text/javascript" src="/assets/js/pagination.js"></script>
+    <script type="text/javascript" src="/assets/js/rowsPerPage.js"></script>
 
 </head>
 
@@ -292,7 +293,7 @@
                         </div>
                     </div>
                     <div class="order-lists">
-                        <div id="tab1" class="tab-content">
+                        <div id="tab1" class="tab-content active">
                             <table id="orders">
                                 <thead>
                                     <tr>
@@ -316,8 +317,44 @@
                                         <td class="info">View Details</td>
                                     </tr>
                                     <tr>
-                                        <td>#5089</td>
-                                        <td>Joseph Wheeler</td>
+                                        <td>#2</td>
+                                        <td>Patty O’Furniture</td>
+                                        <td>6 June, 2023</td>
+                                        <td>$2,564</td>
+                                        <td>CC</td>
+                                        <td class="warning">Pending</td>
+                                        <td class="info">View Details</td>
+                                    </tr>
+                                    <tr>
+                                        <td>#3</td>
+                                        <td>Olive Yew</td>
+                                        <td>7 May, 2023</td>
+                                        <td>$2,564</td>
+                                        <td>CC</td>
+                                        <td class="warning">Pending</td>
+                                        <td class="info">View Details</td>
+                                    </tr>
+                                    <tr>
+                                        <td>#4</td>
+                                        <td>Aida Bugg</td>
+                                        <td>7 June, 2023</td>
+                                        <td>$2,564</td>
+                                        <td>CC</td>
+                                        <td class="warning">Pending</td>
+                                        <td class="info">View Details</td>
+                                    </tr>
+                                    <tr>
+                                        <td>#5</td>
+                                        <td>Maureen Biologist</td>
+                                        <td>16 May, 2023</td>
+                                        <td>$2,564</td>
+                                        <td>CC</td>
+                                        <td class="warning">Pending</td>
+                                        <td class="info">View Details</td>
+                                    </tr>
+                                    <tr>
+                                        <td>#6</td>
+                                        <td>Teri Dactyl</td>
                                         <td>6 April, 2023</td>
                                         <td>$2,564</td>
                                         <td>CC</td>
@@ -325,44 +362,8 @@
                                         <td class="info">View Details</td>
                                     </tr>
                                     <tr>
-                                        <td>#5089</td>
-                                        <td>Joseph Wheeler</td>
-                                        <td>6 April, 2023</td>
-                                        <td>$2,564</td>
-                                        <td>CC</td>
-                                        <td class="warning">Pending</td>
-                                        <td class="info">View Details</td>
-                                    </tr>
-                                    <tr>
-                                        <td>#5089</td>
-                                        <td>Joseph Wheeler</td>
-                                        <td>6 April, 2023</td>
-                                        <td>$2,564</td>
-                                        <td>CC</td>
-                                        <td class="warning">Pending</td>
-                                        <td class="info">View Details</td>
-                                    </tr>
-                                    <tr>
-                                        <td>#5089</td>
-                                        <td>Joseph Wheeler</td>
-                                        <td>6 April, 2023</td>
-                                        <td>$2,564</td>
-                                        <td>CC</td>
-                                        <td class="warning">Pending</td>
-                                        <td class="info">View Details</td>
-                                    </tr>
-                                    <tr>
-                                        <td>#5089</td>
-                                        <td>Joseph Wheeler</td>
-                                        <td>6 April, 2023</td>
-                                        <td>$2,564</td>
-                                        <td>CC</td>
-                                        <td class="warning">Pending</td>
-                                        <td class="info">View Details</td>
-                                    </tr>
-                                    <tr>
-                                        <td>#5089</td>
-                                        <td>Joseph Wheeler</td>
+                                        <td>#7</td>
+                                        <td>Peg Legge</td>
                                         <td>6 April, 2023</td>
                                         <td>$2,564</td>
                                         <td>CC</td>
@@ -370,35 +371,35 @@
                                         <td class="info">View Details</td>
                                     </tr>
                                     <tr>
-                                        <td>#5089</td>
-                                        <td>Joseph Wheeler</td>
-                                        <td>6 April, 2023</td>
+                                        <td>#8</td>
+                                        <td>Allie Grater</td>
+                                        <td>12 May, 2023</td>
                                         <td>$2,564</td>
                                         <td>CC</td>
                                         <td class="success">Completed</td>
                                         <td class="info">View Details</td>
                                     </tr>
                                     <tr>
-                                        <td>#5089</td>
-                                        <td>Joseph Wheeler</td>
-                                        <td>6 April, 2023</td>
+                                        <td>#9</td>
+                                        <td>Liz Erd</td>
+                                        <td>10 May, 2023</td>
                                         <td>$2,564</td>
                                         <td>CC</td>
                                         <td class="danger">Canceled</td>
                                         <td class="info">View Details</td>
                                     </tr>
                                     <tr>
-                                        <td>#5089</td>
-                                        <td>Joseph Wheeler</td>
-                                        <td>6 April, 2023</td>
+                                        <td>#10</td>
+                                        <td>Constance Noring</td>
+                                        <td>6 May, 2023</td>
                                         <td>$2,564</td>
                                         <td>CC</td>
                                         <td class="danger">Canceled</td>
                                         <td class="info">View Details</td>
                                     </tr>
                                     <tr>
-                                        <td>#1</td>
-                                        <td>Joseph Wheeler</td>
+                                        <td>#11</td>
+                                        <td>Hank R. Cheef</td>
                                         <td>5 June, 2023</td>
                                         <td>$2,564</td>
                                         <td>CC</td>
@@ -406,8 +407,8 @@
                                         <td class="info">View Details</td>
                                     </tr>
                                     <tr>
-                                        <td>#1</td>
-                                        <td>Joseph Wheeler</td>
+                                        <td>#12</td>
+                                        <td>Del Phineum</td>
                                         <td>1 June, 2023</td>
                                         <td>$2,564</td>
                                         <td>CC</td>
@@ -415,8 +416,8 @@
                                         <td class="info">View Details</td>
                                     </tr>
                                     <tr>
-                                        <td>#1</td>
-                                        <td>Joseph Wheeler</td>
+                                        <td>#13</td>
+                                        <td>Rod Knee</td>
                                         <td>1 May, 2023</td>
                                         <td>$2,564</td>
                                         <td>CC</td>
@@ -435,7 +436,7 @@
                         <!-- -----------------------BOTTOM ROW STARTS HERE------------------------ -->
                         <div class="bottom-row">
                             <div class="page-count">Showing
-                                <select>
+                                <select id="dataPerPage">
                                     <option selected value="10">10</option>
                                     <option value="20">20</option>
                                     <option value="30">30</option>

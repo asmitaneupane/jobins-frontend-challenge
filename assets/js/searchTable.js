@@ -1,4 +1,4 @@
-//search table by id
+//search table by customer name
 function searchOrder() {
   var input, filter, table, tr, td, i, txtValue;
   input = document.getElementById("inputSearch");
@@ -6,7 +6,7 @@ function searchOrder() {
   table = document.getElementById("orders");
   tr = table.getElementsByTagName("tr");
   for (i = 0; i < tr.length; i++) {
-    td = tr[i].getElementsByTagName("td")[0];
+    td = tr[i].getElementsByTagName("td")[1];
     if (td) {
       txtValue = td.textContent || td.innerText;
       if (txtValue.toUpperCase().indexOf(filter) > -1) {

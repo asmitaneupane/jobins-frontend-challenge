@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
-    // Show the first tab content and set the first tab button as active
-    var defaultTab = document.getElementById("tab1");
-    defaultTab.style.display = "block";
+    // // Show the first tab content and set the first tab button as active
+    // var defaultTab = document.getElementById("tab1");
+    // defaultTab.style.display = "block";
     var defaultButton = document.querySelector(".tab[data-target='tab1']");
     defaultButton.classList.add("active");
 });
