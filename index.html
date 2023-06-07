@@ -25,8 +25,11 @@
     <script type="text/javascript" src="/assets/js/statusFilter.js"></script>
     <script type="text/javascript" src="/assets/js/searchTable.js"></script>
     <script type="text/javascript" src="/assets/js/dateRangeFilter.js"></script>
-    <script type="text/javascript" src="/assets/js/pagination.js"></script>
+    <!-- <script type="text/javascript" src="/assets/js/pagination.js"></script> -->
     <script type="text/javascript" src="/assets/js/rowsPerPage.js"></script>
+
+    <script src="https://unpkg.com/vue@3.2.13"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
 </head>
 
@@ -282,6 +285,7 @@
                                 search
                             </i>
                         </div>
+                        
                         <div class="date-range-filter">
                             <select name="" id="dateRangeFilter" class="date-filter">
                                 <option selected value="">Filter by date range</option>
@@ -292,12 +296,12 @@
                             </select>
                         </div>
                     </div>
-                    <div class="order-lists">
+                    <div id="app" class="order-lists">
                         <div id="tab1" class="tab-content active">
                             <table id="orders">
                                 <thead>
                                     <tr>
-                                        <th class="block-title">ID</th>
+                                        <th class="block-title">id</th>
                                         <th class="block-title">customer</th>
                                         <th class="block-title">date</th>
                                         <th class="block-title">total</th>
@@ -307,122 +311,14 @@
                                     </tr>
                                 </thead>
                                 <tbody id="tableBody">
-                                    <tr>
-                                        <td>#1</td>
-                                        <td>Joseph Wheeler</td>
-                                        <td>4 June, 2023</td>
-                                        <td>$2,564</td>
-                                        <td>CC</td>
-                                        <td class="warning">Pending</td>
-                                        <td class="info">View Details</td>
-                                    </tr>
-                                    <tr>
-                                        <td>#2</td>
-                                        <td>Patty O’Furniture</td>
-                                        <td>6 June, 2023</td>
-                                        <td>$2,564</td>
-                                        <td>CC</td>
-                                        <td class="warning">Pending</td>
-                                        <td class="info">View Details</td>
-                                    </tr>
-                                    <tr>
-                                        <td>#3</td>
-                                        <td>Olive Yew</td>
-                                        <td>7 May, 2023</td>
-                                        <td>$2,564</td>
-                                        <td>CC</td>
-                                        <td class="warning">Pending</td>
-                                        <td class="info">View Details</td>
-                                    </tr>
-                                    <tr>
-                                        <td>#4</td>
-                                        <td>Aida Bugg</td>
-                                        <td>7 June, 2023</td>
-                                        <td>$2,564</td>
-                                        <td>CC</td>
-                                        <td class="warning">Pending</td>
-                                        <td class="info">View Details</td>
-                                    </tr>
-                                    <tr>
-                                        <td>#5</td>
-                                        <td>Maureen Biologist</td>
-                                        <td>16 May, 2023</td>
-                                        <td>$2,564</td>
-                                        <td>CC</td>
-                                        <td class="warning">Pending</td>
-                                        <td class="info">View Details</td>
-                                    </tr>
-                                    <tr>
-                                        <td>#6</td>
-                                        <td>Teri Dactyl</td>
-                                        <td>6 April, 2023</td>
-                                        <td>$2,564</td>
-                                        <td>CC</td>
-                                        <td class="warning">Pending</td>
-                                        <td class="info">View Details</td>
-                                    </tr>
-                                    <tr>
-                                        <td>#7</td>
-                                        <td>Peg Legge</td>
-                                        <td>6 April, 2023</td>
-                                        <td>$2,564</td>
-                                        <td>CC</td>
-                                        <td class="success">Completed</td>
-                                        <td class="info">View Details</td>
-                                    </tr>
-                                    <tr>
-                                        <td>#8</td>
-                                        <td>Allie Grater</td>
-                                        <td>12 May, 2023</td>
-                                        <td>$2,564</td>
-                                        <td>CC</td>
-                                        <td class="success">Completed</td>
-                                        <td class="info">View Details</td>
-                                    </tr>
-                                    <tr>
-                                        <td>#9</td>
-                                        <td>Liz Erd</td>
-                                        <td>10 May, 2023</td>
-                                        <td>$2,564</td>
-                                        <td>CC</td>
-                                        <td class="danger">Canceled</td>
-                                        <td class="info">View Details</td>
-                                    </tr>
-                                    <tr>
-                                        <td>#10</td>
-                                        <td>Constance Noring</td>
-                                        <td>6 May, 2023</td>
-                                        <td>$2,564</td>
-                                        <td>CC</td>
-                                        <td class="danger">Canceled</td>
-                                        <td class="info">View Details</td>
-                                    </tr>
-                                    <tr>
-                                        <td>#11</td>
-                                        <td>Hank R. Cheef</td>
-                                        <td>5 June, 2023</td>
-                                        <td>$2,564</td>
-                                        <td>CC</td>
-                                        <td class="warning">Pending</td>
-                                        <td class="info">View Details</td>
-                                    </tr>
-                                    <tr>
-                                        <td>#12</td>
-                                        <td>Del Phineum</td>
-                                        <td>1 June, 2023</td>
-                                        <td>$2,564</td>
-                                        <td>CC</td>
-                                        <td class="warning">Pending</td>
-                                        <td class="info">View Details</td>
-                                    </tr>
-                                    <tr>
-                                        <td>#13</td>
-                                        <td>Rod Knee</td>
-                                        <td>1 May, 2023</td>
-                                        <td>$2,564</td>
-                                        <td>CC</td>
-                                        <td class="warning">Pending</td>
-                                        <td class="info">View Details</td>
+                                    <tr v-for="(order, index) in paginatedOrders" :key="index">
+                                        <td>{{order.id}}</td>
+                                        <td>{{order.customer}}</td>
+                                        <td>{{order.date}}</td>
+                                        <td>{{order.total}}</td>
+                                        <td>{{order.method}}</td>
+                                        <td :class="getStatusClass(order.status)">{{order.status}}</td>
+                                        <td class="info">{{order.action}}</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -436,7 +332,7 @@
                         <!-- -----------------------BOTTOM ROW STARTS HERE------------------------ -->
                         <div class="bottom-row">
                             <div class="page-count">Showing
-                                <select id="dataPerPage">
+                                <select id="dataPerPage" v-model="rowsPerPage" @change="handleRowsPerPageChange">
                                     <option selected value="10">10</option>
                                     <option value="20">20</option>
                                     <option value="30">30</option>
@@ -444,15 +340,26 @@
                                 </select>
                                 of 50
                             </div>
+
                             <div id="pagination">
-                                <button id="prevBtn"><span class="material-icons-outlined">
-                                        navigate_before
-                                    </span></button>
-                                <div id="pageButtons"></div>
-                                <button id="nextBtn"><span class="material-icons-outlined">
-                                        navigate_next
-                                    </span></button>
-                            </div>
+                                <button @click="goToPrevPage" :disabled="currentPage === 1">
+                                  <span class="material-icons-outlined">navigate_before</span>
+                                </button>
+                                <div id="pageButtons">
+                                  <button
+                                    v-for="pageNumber in totalPages"
+                                    :key="pageNumber"
+                                    @click="goToPage(pageNumber)"
+                                    :class="{ active: currentPage === pageNumber }"
+                                  >
+                                    {{ pageNumber }}
+                                  </button>
+                                </div>
+                                <button @click="goToNextPage" :disabled="currentPage === totalPages">
+                                  <span class="material-icons-outlined">navigate_next</span>
+                                </button>
+                              </div>
+                              
                         </div>
                     </div>
                 </div>
@@ -460,6 +367,9 @@
             <!-- -----------------------CONTAINER ENDS HERE------------------------ -->
         </main>
     </div>
+
+    <script src="app.js"></script>
+
 </body>
 
 </html>
