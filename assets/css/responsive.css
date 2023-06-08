@@ -1,0 +1,74 @@
+/*   ===== Medias/Responsive =====   */
+@-ms-viewport {
+    width: device-width;
+}
+
+@viewport {
+    width: device-width;
+}
+
+/* All Tablet Portrait size smaller than standard 1199 (devices and browsers) */
+@media only screen and (min-width: 1300px) {}
+
+@media only screen and (max-width: 1140px) {}
+
+/* All Tablet Portrait size smaller than standard 1023 (devices and browsers) */
+@media only screen and (max-width: 1023px) {
+
+    .page-content {
+        position: relative;
+        grid-template-columns: auto;
+    }
+
+    /* Navbar  */
+
+    main .navbar {
+        grid-template-columns: 50px 1fr auto;
+    }
+
+    /* Hamburger Menu  */
+
+    #hamburger-menu {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    #hamburger-menu i {
+        font-size: 30px;
+    }
+
+    /* Close Menu  */
+
+    aside {
+        display: none;
+    }
+
+    aside.active {
+        display: block;
+        width: 260px;
+        position: absolute;
+        height: 100%;
+        z-index: 1;
+    }
+
+    aside.active~main {
+        background: var(--color-bg-variant);
+        opacity: 0.4;
+    }
+
+    .close {
+        cursor: pointer;
+    }
+
+}
+
+@media only screen and (max-width: 992px) {}
+
+@media only screen and (max-width: 840px) {}
+
+/* All Mobile Portrait size smaller than 768 (devices and browsers) */
+@media only screen and (max-width: 768px) {}
+
+/* All Mobile size smaller than standard 479 (devices and browsers) */
+@media only screen and (max-width: 480px) {}

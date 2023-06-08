@@ -270,6 +270,12 @@ main .navbar .actions {
     align-items: center;
 }
 
+/* Hamburger Menu  */
+
+#hamburger-menu {
+    display: none;
+}
+
 /* -------------------------- MAIN BODY ------------------------ */
 
 main {

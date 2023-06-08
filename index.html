@@ -19,16 +19,12 @@
 
     <!-- Stylesheet -->
     <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/responsive.css">
 
-    <!-- Scripts -->
-    <script type="text/javascript" src="/assets/js/tabSelection.js"></script>
-    <script type="text/javascript" src="/assets/js/statusFilter.js"></script>
-    <script type="text/javascript" src="/assets/js/searchTable.js"></script>
-    <script type="text/javascript" src="/assets/js/dateRangeFilter.js"></script>
-    <!-- <script type="text/javascript" src="/assets/js/pagination.js"></script> -->
-    <script type="text/javascript" src="/assets/js/rowsPerPage.js"></script>
-
+    <!-- VueJs Import  -->
     <script src="https://unpkg.com/vue@3.2.13"></script>
+
+    <!-- Axios Import  -->
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
 </head>
@@ -37,7 +33,7 @@
     <div class="page-content">
 
         <!-- -----------------------ASIDE STARTS HERE------------------------ -->
-        <aside>
+        <aside id="aside">
             <div class="top">
                 <div class="logo">
                     <img src="./assets/images/logo.png" alt="" />
@@ -85,6 +81,11 @@
             <div class="container">
                 <!-- -----------------------NAVBAR STARTS HERE------------------------ -->
                 <div class="navbar">
+                    <div class="open" id="hamburger-menu">
+                        <i class="material-icons-outlined">
+                            menu
+                        </i>
+                    </div>
                     <h1 class="page-title">Dashboard</h1>
                     <div class="actions">
                         <div class="notifications">
@@ -285,7 +286,7 @@
                                 search
                             </i>
                         </div>
-                        
+
                         <div class="date-range-filter">
                             <select name="" id="dateRangeFilter" class="date-filter">
                                 <option selected value="">Filter by date range</option>
@@ -343,23 +344,19 @@
 
                             <div id="pagination">
                                 <button @click="goToPrevPage" :disabled="currentPage === 1">
-                                  <span class="material-icons-outlined">navigate_before</span>
+                                    <span class="material-icons-outlined">navigate_before</span>
                                 </button>
                                 <div id="pageButtons">
-                                  <button
-                                    v-for="pageNumber in totalPages"
-                                    :key="pageNumber"
-                                    @click="goToPage(pageNumber)"
-                                    :class="{ active: currentPage === pageNumber }"
-                                  >
-                                    {{ pageNumber }}
-                                  </button>
+                                    <button v-for="pageNumber in totalPages" :key="pageNumber"
+                                        @click="goToPage(pageNumber)" :class="{ active: currentPage === pageNumber }">
+                                        {{ pageNumber }}
+                                    </button>
                                 </div>
                                 <button @click="goToNextPage" :disabled="currentPage === totalPages">
-                                  <span class="material-icons-outlined">navigate_next</span>
+                                    <span class="material-icons-outlined">navigate_next</span>
                                 </button>
-                              </div>
-                              
+                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -368,7 +365,18 @@
         </main>
     </div>
 
+    <!-- Scripts -->
+    <script type="text/javascript" src="/assets/js/tabSelection.js"></script>
+    <script type="text/javascript" src="/assets/js/statusFilter.js"></script>
+    <script type="text/javascript" src="/assets/js/searchTable.js"></script>
+    <script type="text/javascript" src="/assets/js/dateRangeFilter.js"></script>
+    <!-- <script type="text/javascript" src="/assets/js/pagination.js"></script> -->
+    <!-- <script type="text/javascript" src="/assets/js/rowsPerPage.js"></script> -->
+    <script src="./assets/js/sidebarToggle.js"></script>
+
+    <!-- vuejs module import -->
     <script src="app.js"></script>
+
 
 </body>
 
