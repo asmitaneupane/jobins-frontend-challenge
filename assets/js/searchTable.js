@@ -17,3 +17,15 @@ function searchOrder() {
     }
   }
 }
+
+window.onload = function() {
+  // Clear the input field
+  document.getElementById("inputSearch").value = "";
+
+  // Show all rows in the table
+  var table = document.getElementById("orders");
+  var rows = table.getElementsByTagName("tr");
+  for (var i = 0; i < rows.length; i++) {
+    rows[i].style.display = "";
+  }
+};

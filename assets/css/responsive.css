@@ -10,10 +10,7 @@
 /* All Tablet Portrait size smaller than standard 1199 (devices and browsers) */
 @media only screen and (min-width: 1300px) {}
 
-@media only screen and (max-width: 1140px) {}
-
-/* All Tablet Portrait size smaller than standard 1023 (devices and browsers) */
-@media only screen and (max-width: 1023px) {
+@media only screen and (max-width: 1140px) {
 
     .page-content {
         position: relative;
@@ -61,6 +58,12 @@
         cursor: pointer;
     }
 
+}
+
+/* All Tablet Portrait size smaller than standard 1023 (devices and browsers) */
+@media only screen and (max-width: 1023px) {
+
+   
 }
 
 @media only screen and (max-width: 992px) {}
