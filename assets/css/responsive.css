@@ -63,15 +63,148 @@
 /* All Tablet Portrait size smaller than standard 1023 (devices and browsers) */
 @media only screen and (max-width: 1023px) {
 
-   
+    main .chart {
+        grid-template-columns: 350px 242px 1fr;
+    }
+
 }
 
 @media only screen and (max-width: 992px) {}
 
-@media only screen and (max-width: 840px) {}
+@media only screen and (max-width: 840px) {
+
+    main .order-lists table {
+        border-spacing: 0;
+        margin: 10px;
+    }
+
+    .bottom-row {
+        margin-top: 24px;
+    }
+
+    main .chart {
+        grid-template-columns: 1fr 250px;
+    }
+
+    main .chart>div.country-status {
+        gap: 1rem;
+    }
+
+    .order-lists .tab-content.active {
+        overflow-x: auto;
+    }
+
+}
 
 /* All Mobile Portrait size smaller than 768 (devices and browsers) */
-@media only screen and (max-width: 768px) {}
+@media only screen and (max-width: 768px) {
+
+    main .chart .card:last-child {
+        margin-top: 0;
+    }
+
+    main .insights .user-info {
+        justify-content: space-between;
+    }
+
+    main .insights .user-info .right {
+        margin-top: 18px;
+        margin-left: 18px;
+    }
+
+}
 
 /* All Mobile size smaller than standard 479 (devices and browsers) */
-@media only screen and (max-width: 480px) {}
+@media only screen and (max-width: 480px) {
+
+    main .chart {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .user-info .bar {
+        position: relative;
+        top: 0;
+        display: block;
+        width: 100%;
+        height: 0;
+        margin: 15px 0;
+    }
+
+    main .insights .user-info {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    main .insights .user-info .right {
+        margin-left: 0;
+    }
+
+    .search-filter-bar {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+
+    .page-content {
+        display: flex;
+    }
+
+    .order-lists .tab-content {
+        padding-bottom: 0;
+    }
+
+    .bottom-row {
+        flex-direction: column;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+}
+
+/* All Mobile size smaller than standard 359 (devices and browsers) */
+@media only screen and (max-width: 360px) {
+
+    main {
+        width: calc(100% - 40px);
+        margin: 1.54rem 20px 0;
+    }
+
+    main .chart>div.sales .left {
+        left: 0;
+    }
+
+    .chart .profit .bottom {
+        margin-top: 15px;
+    }
+
+    main .chart {
+        margin-top: 10px;
+        gap: unset;
+    }
+
+    main .chart>div.sales {
+        margin-bottom: 0;
+    }
+
+    main .chart>div.country-status {
+        margin-bottom: 0;
+    }
+
+    .status-filter,
+    .search-bar,
+    .date-range-filter {
+        width: 100%;
+    }
+
+    #inputSearch,
+    .dropbtn,
+    .date-filter {
+        width: 100%;
+    }
+
+    .dropbtn,
+    .date-filter {
+        background-position: right center;
+    }
+}

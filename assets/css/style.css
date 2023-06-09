@@ -51,9 +51,9 @@ body {
     grid-template-columns: 260px 1fr;
 }
 
-.container {
+/* .container {
     margin-inline: 26px;
-}
+} */
 
 a {
     color: var(--color-primary);
@@ -219,6 +219,7 @@ main .navbar {
 main .navbar .actions {
     display: flex;
     align-items: center;
+    justify-content: flex-end;
 }
 
 .navbar .actions .profile {
@@ -281,8 +282,10 @@ main .navbar .actions {
 /* -------------------------- MAIN BODY ------------------------ */
 
 main {
-    margin-top: 1.54rem;
-}
+    width: calc(100% - 50px);
+    margin: 1.54rem 25px 0;
+    padding: 0 15px;
+  }
 
 main h1.page-title {
     font-size: 1.85rem;
@@ -373,9 +376,19 @@ main .chart>div.profit .top {
     display: flex;
 }
 
+.profit .bottom small {
+    display: flex;
+}
+
+.profit .bottom small> span {
+    display: flex;
+    align-items: center;
+    padding-right: 8px;
+}
+
 main .chart>div .country {
     display: grid;
-    grid-template-columns: 45px 90px 1fr 65px;
+    grid-template-columns: 40px 90px 1fr 65px;
     gap: 1rem;
 }
 
@@ -429,6 +442,7 @@ main .insights .card {
 
 main .insights .user-info {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
 }
@@ -525,11 +539,12 @@ main .insights .user-info .circle {
 .order-lists .tab-content {
     display: none;
     text-align: center;
-    padding-block: 24px;
+    padding: 24px 0;
 }
 
 .order-lists .tab-content.active {
     display: block;
+    height: 455px;
 }
 
 .search-filter-bar {
@@ -628,6 +643,7 @@ main .order-details .order-lists:hover {
 
 main .order-lists table {
     width: 100%;
+    border-collapse: collapse;
 }
 
 main table tbody td {
@@ -648,6 +664,10 @@ main table thead th {
     color: var(--color-secondary);
     font-weight: 500;
 }
+
+th, td {
+    padding: 8px;
+  }
 
 /* --------------------------------------Bottom Row-------------------------------- */
 
